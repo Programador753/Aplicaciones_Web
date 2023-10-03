@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>06-Frames.html</title>
+ </head>
+ <!-- LAS PAGINAS CON FRAMES NO LLEVAN ETIQUETA BODY -->
+ <frameset rows="20%,70%,10%" frameborder="0">
+    <frame src="06-Cabecera.html" noresize scrolling="no"><!-- SE COLOCA EN EL 20% IMAGEN CABECERA-->
+    <frameset cols="20%,60%,20%"><!-- SE COLOCA EN EL 70%-->
+        <frame src="06-Menu.html" noresize><!-- 20% -->
+        <frame src="03-Wikipedia.html" noresize name="principal"><!-- 60% -->
+        <frame src="06-Imagenlat.html"><!-- 20% IMAGEN-->
+    </frameset>
+    <frame src="06-Marquee.html" noresize><!-- SE COLOCA EN EL 10% PAGINA MARQUEE-->
+ </frameset>
+</html>
