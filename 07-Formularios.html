@@ -9,7 +9,7 @@
   <title>07-Formularios.html</title>
  </head>
  <body>
- <form>    
+ <form action="07-Fin.html"> <!-- Abro etiqueta form (formulario)-->  
     <table align="center" width="50%" border="1" cellpadding="5" cellspacing="5">
         <tr>
             <td colspan="2" align="center"><h2>FORMULARIO</h2></td>
@@ -41,7 +41,7 @@
                     <option value="">Elige país
                     <option value="España">España
                     <option value="Alemania">Alemania
-                    <option value="Francia">Francia
+                    <option value="Francia" selected>Francia <!-- Atributo selected para dejar seleccionado por defecto -->
                     <option value="Italia">Italia
                 </select>
             </td>
@@ -68,11 +68,11 @@
         </tr>
         <tr>
             <td>Imagen</td>
-            <td><input type="file" name="imagen" id="imagen"></td>
+            <td><input type="file" name="imagen" id="imagen"></td> <!-- type=file para subir archivos en un formulario-->
         </tr>
         <tr>
             <td>Observaciones</td>
-            <td><textarea cols="50" rows="6" name="observaciones" id="observaciones"></textarea></td>
+            <td><textarea cols="50" rows="6" name="observaciones" id="observaciones"></textarea></td> <!-- textarea para hacer zonas de escritura -->
         </tr>
         <tr>
             <td colspan="2">
@@ -82,11 +82,12 @@
             </td>
         </tr>
     </table>
- </form>
+ </form><!-- cierre etiqueta form (formulario)-->
  </body>
 </html>
 <!-- 
     cellpadding="5" -> Espacio entre el contenido de la celda y el borde
     cellspacing="5" -> Espacio entre celdas
+    atributibuto id y name igual 
 
 -->
