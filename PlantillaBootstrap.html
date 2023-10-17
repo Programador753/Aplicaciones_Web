@@ -1,22 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta name="Generator" content="EditPlus®">
-  <meta name="Author" content="">
-  <meta name="Keywords" content="">
-  <meta name="Description" content="">
-  <title>PlantillaBootstrap.html</title>
-  <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
- </head>
- <body>
- <div class="container">
-		<div class="form-group col-8 offset-2">
 
-		
-		</div>
- </div>
- <script src="bootstrap/js/bootstrap.bundle.min.js">
- </script>
- </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>PlantillaBootstrap.html</title>
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-group col-8 offset-2">
+            <table class="table">
+                <thead>
+                    <th>#</th>
+                    <th>First</th>
+                    <th>Last</th>
+                    <th>Handle</th>
+                </thead>
+                <tbody>
+                    <tr class="table-active">
+                        <th scope="row">1</th>
+                        <td colspan="2" class="table-active">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td colspan="2" class="table-active">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2" class="table-active">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-dark table-hover" border="1" align="center" width="90%" bgcolor="#ffccff"
+                cellspacing="10" cellpadding="10">
+                <tbody>
+                    <tr>
+                        <td colspan="4">COLEGIO SALESIANOS</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td rowspan="2">8</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>11</td>
+                    </tr>
+                </tbody>
+            </table>
+            <img src="Imagenes/Zaragoza.jpg" height=200 class="rounded float-start" alt="...">
+            <img src="Imagenes/Zaragoza.jpg" height=200 class="rounded float-end" alt="...">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Launch demo modal
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="Imagenes/Zaragoza.jpg" height="260" class="rounded float-end" alt="...">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="bootstrap/js/bootstrap.bundle.min.js">
+    </script>
+</body>
+
 </html>
