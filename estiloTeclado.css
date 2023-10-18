@@ -17,7 +17,7 @@
 .tecladoAlfa{
     width:280px;
     height:120px;
-    float:left;
+    float:left;/* Se ajusta a la izquierda*/
     padding-left:10px;
 }
 .tecladoNum{
