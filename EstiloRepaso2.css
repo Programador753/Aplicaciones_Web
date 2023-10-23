@@ -17,6 +17,8 @@ Aplicar la clase datos registrales a los campos que se piden
 */
 table
 {
+margin: auto;
+position: center;
 border: 5px dashed red; 
 background-color: rgba(158, 255, 242, 0.4)
 }
@@ -28,7 +30,7 @@ font-size: 18px;
 input, textarea
 {
 font-family: Courier;
-font-size: 11px;
+font-size: 14px;
 }
 body
 {
@@ -39,16 +41,15 @@ background-attachment:fixed
 }
 input:required
 {
-    color: red;
-    text-transform: uppercase;
+color: red;
 }
 input[type="submit"]:hover
 {
-    font-size: 20px;
+font-size: 20px;
 }
 .resaltado:hover
 {
-    font-size: 20px;
+font-size: 20px;
 }
 ul
 {

@@ -18,6 +18,9 @@
     <br>
     <table border="3">
         <tr>
+            <td colspan="2"><marquee height="50" behavior="alternate" scrollamount="5" scrolldelay="30" truespeed="truespeed" ><img src="./Imagenes/logo.png" width="50"><img src="./Imagenes/logo_tiempo.jpg" width="50"><img src="./Imagenes/Facebook_icon_2013.svg.png" width="50"><img src="./Imagenes/Logo_of_Twitter.svg.png" width="50"><img src="./Imagenes/YouTube_social_white_square_(2017).svg.png" width="50"></marquee></td>
+        </tr>
+        <tr>
             <td><img src="./Imagenes/Patio.jpg" usemap="#image-map"></td>
             <td><a href="https://zaragoza.salesianos.edu/"><img src="./Imagenes/logo.png" alt="Logotipo Salesianos" align="right"></a></td>
         </tr>
@@ -43,7 +46,7 @@
         <tr>
             <td><h2>Carreteras</h2></td>
             <td>
-                <ul>
+                <ul align="center">
                 <li><a href="https://es.wikipedia.org/wiki/Autov%C3%ADa_del_Nordeste" target="_blank"><img src="./Imagenes/ESP_A-2.svg.png"></a></li>
                 <li><a href="https://es.wikipedia.org/wiki/Autopista_Zaragoza-Mediterr%C3%A1neo" target="_blank"><img src="./Imagenes/ESP_AP-2.svg.png"></a></li>
                 <li><a href="https://es.wikipedia.org/wiki/N-232" target="_blank"><img src="./Imagenes/ESP_N-232.svg.png"></a></li>
@@ -51,6 +54,81 @@
                 </ul>
             </td>
         </tr>
-    </table>
+        <form>
+        <tr>
+            <td class="resaltado">Provincia</td><!-- formulario de seleccion con desplehable-->
+            <td>
+        <select name="Provincia" id="Provincia" required>
+        <option value="15">A Coruña</option>
+        <option value="1">Álava</option>
+        <option value="2">Albacete</option>
+        <option value="3">Alicante</option>
+        <option value="4">Almería</option>
+        <option value="33">Asturias</option>
+        <option value="5">Ávila</option>
+        <option value="6">Badajoz</option>
+        <option value="7">Baleares (Illes)</option>
+        <option value="8">Barcelona</option>
+        <option value="9">Burgos</option>
+        <option value="10">Cáceres</option>
+        <option value="11">Cádiz</option>
+        <option value="39">Cantabria</option>
+        <option value="12">Castellón</option>
+        <option value="51">Ceuta</option>
+        <option value="13">Ciudad Real</option>
+        <option value="14">Córdoba</option>
+        <option value="16">Cuenca</option>
+        <option value="17">Girona</option>
+        <option value="18">Granada</option>
+        <option value="19">Guadalajara</option>
+        <option value="20">Guipúzcoa</option>
+        <option value="21">Huelva</option>
+        <option value="22">Huesca</option>
+        <option value="23">Jaén</option>
+        <option value="26">La Rioja</option>
+        <option value="35">Las Palmas</option>
+        <option value="24">León</option>
+        <option value="25">Lleida</option>
+        <option value="27">Lugo</option>
+        <option value="28">Madrid</option>
+        <option value="29">Málaga</option>
+        <option value="52">Melilla</option>
+        <option value="30">Murcia</option>
+        <option value="31">Navarra</option>
+        <option value="32">Ourense</option>
+        <option value="34">Palencia</option>
+        <option value="36">Pontevedra</option>
+        <option value="37">Salamanca</option>
+        <option value="38">Santa Cruz de Tenerife</option>
+        <option value="40">Segovia</option>
+        <option value="41">Sevilla</option>
+        <option value="42">Soria</option>
+        <option value="43">Tarragona</option>
+        <option value="44">Teruel</option>
+        <option value="45">Toledo</option>
+        <option value="46">Valencia</option>
+        <option value="47">Valladolid</option>
+        <option value="48">Vizcaya</option>
+        <option value="49">Zamora</option>
+        <option value="50">Zaragoza</option>
+        </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td><!-- Pedimos correo electronico-->
+            <td><input type="email" name="correo" id="correo" placeholder="" maxlength="60" size="40" required></td>
+        </tr>
+        <tr>
+            <td>Password</td><!-- Pedir contraseñas fomulario-->
+            <td><input type="password" name="clave" id="clave" placeholder="maximo 40 caracteres" maxlength="40" size="40" required></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" value="Chequear">
+                <input type="reset" value="Borrar">
+                <input type="submit" value="Enviar">
+            </td>
+        </tr>
+    </form></table>
  </body>
 </html>
