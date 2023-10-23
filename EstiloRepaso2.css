@@ -30,7 +30,7 @@ font-size: 18px;
 input, textarea
 {
 font-family: Courier;
-font-size: 18px;
+font-size: 14px;
 }
 body
 {
@@ -45,7 +45,7 @@ color: red;
 }
 input[type="submit"]:hover
 {
-font-size: 30px;
+font-size: 20px;
 }
 .resaltado:hover
 {
