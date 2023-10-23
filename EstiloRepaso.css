@@ -37,7 +37,16 @@ background-repeat:no-repeat;
 background-position:center;
 background-attachment:fixed
 }
-.Obligatorio
+input:required
 {
-color: red;
+    color: red;
+    text-transform: uppercase;
+}
+input[type="submit"]:hover
+{
+    font-size: 20px;
+}
+.resaltado:hover
+{
+    font-size: 20px;
 }
