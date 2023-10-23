@@ -1,0 +1,56 @@
+/*
+Tabla 
+con color de fondo
+bordes anchos y color
+
+td
+tipo de fuente Verdana tamaño 12
+input, textarea tipo de fuente arial tamaño 11
+body  imagen de fondo centrada, fija y sin repetir
+
+clase de nombre obligatiorio 
+    color rojo
+
+
+Aplicar la clase datos registrales a los campos que se piden 
+
+*/
+table
+{
+border: 5px dashed red; 
+background-color: rgba(158, 255, 242, 0.4)
+}
+td
+{
+font-family: verdana; 
+font-size: 18px;
+}
+input, textarea
+{
+font-family: Courier;
+font-size: 11px;
+}
+body
+{
+background-image:url("https://zaragoza.salesianos.edu/wp-content/uploads/2017/06/logoSalesianosWeb.png");
+background-repeat:no-repeat;
+background-position:center;
+background-attachment:fixed
+}
+input:required
+{
+    color: red;
+    text-transform: uppercase;
+}
+input[type="submit"]:hover
+{
+    font-size: 20px;
+}
+.resaltado:hover
+{
+    font-size: 20px;
+}
+ul
+{
+list-style: none;
+}
