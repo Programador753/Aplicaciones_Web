@@ -17,9 +17,8 @@ Aplicar la clase datos registrales a los campos que se piden
 */
 table
 {
-border: solid;
-border: 3px; 
-border-color: blue;
+border: 5px solid red; 
+background-color: silver;
 }
 td
 {
