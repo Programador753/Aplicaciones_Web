@@ -1,3 +1,1 @@
-Readme.md
-Hola clase 2E
-Esto es un cambio en el readme
+Repositorio con los ejercicios de las clases de Aplicaciones Web
