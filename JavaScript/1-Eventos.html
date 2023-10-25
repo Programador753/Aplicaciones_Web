@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>1-Eventos.html</title>
+ </head>
+ <!-- <body style="background-color: red;"> --> <!-- Atributo de estilos-->
+<body name="cuerpo" id="cuerpo" bgcolor="#99ccff">
+    <input type="button" value="+" onclick="Logo.width= Logo.width + 10">
+    <input type="button" value="-" onclick="Logo.width= Logo.width - 10">
+    <br>
+    <select name=imagen id="imagen" onchange="Logo.src = this.value" >
+        <option value="">Elige Imagen</option>
+        <option value="./Imagenes/Patio.jpg">Patio</option>
+        <option value="./Imagenes/logo.png">Logo</option>
+        <option value="./Imagenes/logo_tiempo.jpg">Tiempo</option>
+        <option value="./Imagenes/Zaragoza.jpg">Vista zaragoza</option>
+    </select>
+    <br>
+    <img src="./Imagenes/logo_bolsa.gif" name="Logo" id="Logo">
+    <br>
+    <table style="cursor: pointer" >
+        <tr>
+            <td bgcolor="red" onclick="cuerpo.bgColor=this.bgColor">Rojo</td>
+            <td bgcolor="green" onclick="cuerpo.bgColor=this.bgColor">Verde</td>
+            <td bgcolor="blue" onclick="cuerpo.bgColor=this.bgColor">Azul</td>
+        </tr>
+    </table>
+    <br>
+    <table style="cursor: pointer">
+        <tr>
+            <td bgcolor="red" onclick="cuerpo.style.background=this.bgColor">Rojo</td>
+            <td bgcolor="green" onclick="cuerpo.style.background=this.bgColor">Verde</td>
+            <td bgcolor="blue" onclick="cuerpo.style.background=this.bgColor">Azul</td>
+        </tr>
+    </table> 
+</body>
+</html>
