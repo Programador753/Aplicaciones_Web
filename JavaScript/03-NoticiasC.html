@@ -8,21 +8,21 @@
   <meta name="Description" content="">
   <title>03-NoticiasC.html</title>
   <script language="JavaScript">
-    function cambiar()
+    function cambiar(valor)
     {
-        if(idioma.value==1)
+        if(valor==1)
         {
             espanol.style.display="";
             ingles.style.display="none";
             aleman.style.display="none";
         }
-        if(idioma.value==2)
+        if(valor==2)
         {
             espanol.style.display="none";
             ingles.style.display="";
             aleman.style.display="none";
         }
-        if(idioma.value==3)
+        if(valor==3)
         {
             espanol.style.display="none";
             ingles.style.display="none";
@@ -35,12 +35,9 @@
     <table align="center" width="50%" border="1">
         <tr>
             <td align="center">
-                <select name="idioma" id="idioma" onchange="cambiar()">
-                    <option value="">Elige Idioma</option>
-                    <option value="1">Español</option>
-                    <option value="2">Ingles</option>
-                    <option value="3">Aleman</option>
-                </select>
+                <img src="./Imagenes/Bandera_de_España.svg.png" width="110" alt="Bandera España" onmouseover="cambiar(1)" style="cursor: pointer">
+                <img src="./Imagenes/Flag_of_Germany.svg.png" width="120" alt="bandera alemania" onmouseover="cambiar(3)" style="cursor: pointer">
+                <img src="./Imagenes/Flag_of_the_United_Kingdom_(1-2).svg.png" width="150" alt="bandera inglesa" onmouseover="cambiar(2)" style="cursor: pointer">
             </td>
         </tr>
         <tr>
@@ -50,7 +47,7 @@
                     Hay un nuevo informe de Windows Central que a partir de noviembre indica que Microsoft ya no permitirá que se
                     utilicen accesorios de terceros "no autorizados" en Xbox. En cambio, los jugadores recibirán un error
                     “0x82d60002” si intentan usarlos.
-
+                    <br><br>
                     Xbox dice abiertamente que recibirá un reembolso por esos dispositivos y que los jugadores deben consultar una
                     lista de los accesorios autorizados en su sitio web. Esa lista se puede encontrar aquí . No se trata solo de
                     equipos de la marca Xbox, hay muchos dispositivos de terceros aquí que de hecho han llegado a acuerdos con Xbox.
@@ -62,7 +59,7 @@
                     controlador. Mientras tanto, Cronus puede usar secuencias de comandos que aumentan la asistencia para apuntar,
                     reducen el retroceso y modifican otras configuraciones. Si bien juegos específicos se han dirigido a estos
                     sistemas antes, el cambio "no autorizado" aquí podría impedir su uso en todo el ecosistema de Xbox.
-
+                    <br><br>
                     Pero énfasis en "podría". El editor de WC, Jez Corden, dice que a partir de ahora, hay indicios de que esto
                     afectará a XIM/Cronus ya que no se ha confirmado debido al nuevo cambio. No son necesariamente accesorios en el
                     sentido más tradicional, es decir. un controlador, un mando de juego o un volante. Cronus, por ejemplo, en
@@ -72,7 +69,7 @@
                     pueden usarse para combatir problemas de accesibilidad para los jugadores que los necesitan y no desean "hacer
                     trampa". Ese puede ser un factor en la decisión de Microsoft, ya que han estado muy involucrados en el acceso de
                     accesibilidad para Xbox, incluida la creación del Xbox Adaptive Controller.
-
+                    <br><br>
                     Entonces no, no creo que podamos decir que Cronus y XIM estén muertos en Xbox, a pesar de esta noticia. Este
                     cambio no se implementará hasta el 12 de noviembre y supongo que veremos si dejarán de funcionar cuando llegue
                     la actualización o si Microsoft decide abordar la pregunta directamente antes de eso.
@@ -88,7 +85,7 @@
                     There is a new report from Windows Central that as of November indicates that Microsoft will no longer allow
                     use "unauthorized" third-party accessories on Xbox. Instead, players will receive an error
                     “0x82d60002” if they try to use them.
-
+                    <br><br>
                     Xbox openly says that it will receive a refund for those devices and that players should consult a
                     list of authorized accessories on their website. That list can be found here. It's not just about
                     Xbox-branded equipment, there are many third-party devices here that have actually struck deals with Xbox.
@@ -100,7 +97,7 @@
                     controller. Meanwhile, Cronus can use scripts that increase aiming assist,
                     reduce recoil and modify other settings. While specific games have targeted these
                     systems before, the "unauthorized" change here could prevent its use across the entire Xbox ecosystem.
-
+                    <br><br>
                     But emphasis on "could." WC editor Jez Corden says as of now, there are signs that this
                     will affect XIM/Cronus as it has not been committed due to the new change. They are not necessarily accessories in the
                     more traditional sense, i.e. a controller, gamepad, or steering wheel. Cronus, for example, in
@@ -110,7 +107,7 @@
                     can be used to combat accessibility issues for players who need them and don't want to "do
                     trap." That may be a factor in Microsoft's decision, since they have been heavily involved in accessing
                     accessibility for Xbox, including the creation of the Xbox Adaptive Controller.
-
+                    <br><br>
                     So no, I don't think we can say that Cronus and XIM are dead on Xbox, despite this news. This
                     change won't be implemented until November 12th and I guess we'll see if they stop working when it arrives
                     the update or if Microsoft decides to address the question directly before that.
@@ -125,7 +122,7 @@
                     Es gibt einen neuen Bericht von Windows Central, der ab November darauf hinweist, dass Microsoft dies nicht mehr zulassen wird
                     Verwenden Sie „nicht autorisiertes“ Zubehör von Drittanbietern auf der Xbox. Stattdessen erhalten die Spieler eine Fehlermeldung
                     „0x82d60002“, wenn sie versuchen, sie zu verwenden.
-
+                    <br><br>
                     Xbox sagt offen, dass es eine Rückerstattung für diese Geräte erhalten wird und dass Spieler sich an eine wenden sollten
                     Liste der autorisierten Zubehörteile auf ihrer Website. Diese Liste finden Sie hier. Es geht nicht nur darum
                     Bei Geräten der Marke Xbox gibt es hier viele Geräte von Drittanbietern, die tatsächlich Verträge mit Xbox abgeschlossen haben.
@@ -137,7 +134,7 @@
                     Regler. In der Zwischenzeit kann Cronus Skripte verwenden, die die Zielhilfe erhöhen.
                     Reduzieren Sie den Rückstoß und ändern Sie andere Einstellungen. Während bestimmte Spiele darauf abzielen
                     Auf früheren Systemen könnte die „unautorisierte“ Änderung hier die Verwendung im gesamten Xbox-Ökosystem verhindern.
-
+                    <br><br>
                     Aber die Betonung liegt auf „könnte“. WC-Redakteur Jez Corden sagt, es gebe derzeit Anzeichen dafür
                     wird sich auf XIM/Cronus auswirken, da es aufgrund der neuen Änderung nicht festgeschrieben wurde. Sie sind nicht unbedingt Zubehör in der
                     eher traditioneller Sinn, d.h. ein Controller, ein Gamepad oder ein Lenkrad. Cronus zum Beispiel in
@@ -147,7 +144,7 @@
                     kann verwendet werden, um Zugänglichkeitsprobleme für Spieler zu bekämpfen, die sie benötigen und nicht „tun“ möchten
                     Falle.“ Dies könnte ein Faktor für die Entscheidung von Microsoft sein, da sie stark in den Zugriff verwickelt waren
                     Barrierefreiheit für Xbox, einschließlich der Entwicklung des Xbox Adaptive Controllers.
-
+                    <br><br>
                     Also nein, ich glaube nicht, dass wir trotz dieser Neuigkeiten sagen können, dass Cronus und XIM auf Xbox tot sind. Das
                     Die Änderung wird erst am 12. November umgesetzt und ich schätze, wir werden sehen, ob sie dann nicht mehr funktioniert, wenn sie eintrifft
                     das Update oder wenn Microsoft beschließt, die Frage direkt vorher zu beantworten.
