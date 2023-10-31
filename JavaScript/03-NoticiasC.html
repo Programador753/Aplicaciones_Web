@@ -6,30 +6,41 @@
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
-  <title>03-NoticiasB.html</title>
+  <title>03-NoticiasC.html</title>
+  <script language="JavaScript">
+    function cambiar()
+    {
+        if(idioma.value==1)
+        {
+            espanol.style.display="";
+            ingles.style.display="none";
+            aleman.style.display="none";
+        }
+        if(idioma.value==2)
+        {
+            espanol.style.display="none";
+            ingles.style.display="";
+            aleman.style.display="none";
+        }
+        if(idioma.value==3)
+        {
+            espanol.style.display="none";
+            ingles.style.display="none";
+            aleman.style.display="";
+        }
+    }
+  </script>
  </head>
  <body>
     <table align="center" width="50%" border="1">
         <tr>
             <td align="center">
-                <img src="./Imagenes/Bandera_de_España.svg.png" width="110" alt="Bandera España" name="banderaESP" id="banderaESP" onmouseover="
-                {
-                    espanol.style.display='';
-                    ingles.style.display='none';
-                    aleman.style.display='none';
-                }">
-                <img src="./Imagenes/Flag_of_Germany.svg.png" width="120" alt="bandera alemania" name="banderaAL" id="banderaAL" onmouseover="
-                {
-                    espanol.style.display='none';
-                    ingles.style.display='none';
-                    aleman.style.display='';
-                }">
-                <img src="./Imagenes/Flag_of_the_United_Kingdom_(1-2).svg.png" width="150" alt="bandera inglesa" name="banderaING" id="banderaING" onmouseover="
-                {
-                    espanol.style.display='none';
-                    ingles.style.display='';
-                    aleman.style.display='none';
-                }">
+                <select name="idioma" id="idioma" onchange="cambiar()">
+                    <option value="">Elige Idioma</option>
+                    <option value="1">Español</option>
+                    <option value="2">Ingles</option>
+                    <option value="3">Aleman</option>
+                </select>
             </td>
         </tr>
         <tr>
