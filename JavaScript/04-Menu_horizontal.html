@@ -8,37 +8,36 @@
   <meta name="Description" content="">
   <title>04-Menus_b.html</title>
   <script language="JavaScript">
-    function cambiar(seccion)
+    function cambiar(seccion,ocultar1,ocultar2)
     {
-        if(seccion.style.display=="none")
+        ocultar1.style.visibility="hidden";
+        ocultar2.style.visibility="hidden";
+        if(seccion.style.visibility=="hidden")
         {
-            seccion.style.display="";
+            seccion.style.visibility="inherit";
         }
         else
         {
-            seccion.style.display="none";
+            seccion.style.visibility="hidden";
         }
     }
   </script>
  </head> 
  <body>
-        <table border="2" align="center" width="50%" style="cursor:pointer">
+        <table border="2" align="center" cellpadding="5" cellspacing="5" width="80%" style="cursor:pointer">
         <tr>
-            <td onclick="cambiar(menuGB)">Cilos Formativos Grado Basico</td>
+            <td onclick="cambiar(menuGB, menuGM, menuGS)">Cilos Formativos Grado Basico</td>
+            <td onclick="cambiar(menuGM, menuGB, menuGS)">Cilos Formativos Grado Medio</td>
+            <td onclick="cambiar(menuGS, menuGB, menuGM)">Cilos Formativos Grado Superior</td>
         </tr>
         <tr>
-            <td name="menuGB" id="menuGB" style="display:none">
+            <td name="menuGB" id="menuGB" style="visibility:hidden">
                 <ul>
                     <li>Electricidad y Electrónica</li>
                     <li>Informática y comunicaciones</li>
                 </ul>
             </td>
-        </tr>
-        <tr>
-            <td onclick="cambiar(menuGM)">Cilos Formativos Grado Medio</td>
-        </tr>
-        <tr>
-            <td name="menuGM" id="menuGM" style="display:none">
+            <td name="menuGM" id="menuGM" style="visibility:hidden">
                 <ul>
                     <li>Sistemas Microinformáticos y Redes</li>
                     <li>Electromecánica de Vehículos Automóviles</li>
@@ -47,12 +46,7 @@
                     <li>Instalaciones Eléctricas y Automáticas</li>
                 </ul>
             </td>
-        </tr>
-        <tr>
-            <td onclick="cambiar(menuGS)">Cilos Formativos Grado Superior</td>
-        </tr>
-        <tr>
-            <td name="menuGS" id="menuGS" style="display:none">
+            <td name="menuGS" id="menuGS" style="visibility:hidden">
                 <ul>
                     <li>Programación de la Producción en Fabricación Mecánica</li>
                     <li>Automatización y Robótica industrial</li>
@@ -61,7 +55,6 @@
                     <li>Sistemas Electrotécnicos y Automatizados</li>
                     <li>Automoción</li>
                 </ul>
-
             </td>
         </tr>
     </table>
