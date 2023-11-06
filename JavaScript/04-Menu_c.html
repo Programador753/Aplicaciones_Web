@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>04-Menus_b.html</title>
+  <script language="JavaScript">
+	function cambiar(seccion)
+	{
+		if(seccion.style.display=="none")
+		{
+			seccion.style.display="";
+		}
+		else
+		{
+			seccion.style.display="none";
+		}
+	}
+  </script>
+ </head>
+ <body>
+  <table style="cursor:pointer">
+	<tr>
+		<td onclick="cambiar(menuGM)">Ciclos formativos Grado Medio</td>
+	</tr>
+	<tr>
+		<td name="menuGM" id="menuGM" style="display:none">
+			<ul>
+				<li> Informática </li>
+				<li> Automoción </li>
+				<li> Mecanizado </li>
+			</ul>
+		</td>
+	</tr>
+ 	<tr>
+		<td onclick="cambiar(menuGS)">Ciclos formativos Grado Superior</td>
+	</tr>
+	<tr>
+		<td name="menuGS" id="menuGS" style="display:none">
+			<ul>
+				<li> Informática </li>
+				<li> Robótica</li>
+				<li> Mecanizado </li>
+			</ul>
+		</td>
+	</tr>
+    <tr>
+		<td onclick="cambiar(menuBAC)">Bachillerato</td>
+	</tr>
+	<tr>
+		<td style="display:none" name="menuBAC" id="menuBAC">
+			<ul>
+				<li> Humanidades </li>
+				<li> Ciencias</li>
+				<li> Tecnológico </li>
+			</ul>
+		</td>
+	</tr>
+ 
+  </table>
+ </body>
+</html>

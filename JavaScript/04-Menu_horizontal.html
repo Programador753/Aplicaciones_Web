@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>04-Menus_b.html</title>
+  <script language="JavaScript">
+    function cambiar(seccion)
+    {
+        if(seccion.style.display=="none")
+        {
+            seccion.style.display="";
+        }
+        else
+        {
+            seccion.style.display="none";
+        }
+    }
+  </script>
+ </head> 
+ <body>
+        <table border="2" align="center" width="50%" style="cursor:pointer">
+        <tr>
+            <td onclick="cambiar(menuGB)">Cilos Formativos Grado Basico</td>
+        </tr>
+        <tr>
+            <td name="menuGB" id="menuGB" style="display:none">
+                <ul>
+                    <li>Electricidad y Electrónica</li>
+                    <li>Informática y comunicaciones</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td onclick="cambiar(menuGM)">Cilos Formativos Grado Medio</td>
+        </tr>
+        <tr>
+            <td name="menuGM" id="menuGM" style="display:none">
+                <ul>
+                    <li>Sistemas Microinformáticos y Redes</li>
+                    <li>Electromecánica de Vehículos Automóviles</li>
+                    <li>Mecanizado</li>
+                    <li>Instalaciones de Telecomunicaciones</li>
+                    <li>Instalaciones Eléctricas y Automáticas</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td onclick="cambiar(menuGS)">Cilos Formativos Grado Superior</td>
+        </tr>
+        <tr>
+            <td name="menuGS" id="menuGS" style="display:none">
+                <ul>
+                    <li>Programación de la Producción en Fabricación Mecánica</li>
+                    <li>Automatización y Robótica industrial</li>
+                    <li>Sistemas de Telecomunicaciones e informáticos</li>
+                    <li>Desarrollo de Aplicaciones Multiplataforma</li>
+                    <li>Sistemas Electrotécnicos y Automatizados</li>
+                    <li>Automoción</li>
+                </ul>
+
+            </td>
+        </tr>
+    </table>
+ </body>
+</html>

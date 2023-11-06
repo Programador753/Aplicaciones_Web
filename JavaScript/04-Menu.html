@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>04-Menus.html</title>
+  <script language="JavaScript">
+	function gradoMedio()
+	{
+		//document.getElementById("menuGM").display="";
+		if(menuGM.style.display=="none")
+		{
+			menuGM.style.display="";
+		}
+		else
+		{
+			menuGM.style.display="none";
+		}
+	}
+  </script>
+ </head>
+ <body>
+  <table style="cursor:pointer">
+	<tr>
+		<td onclick="gradoMedio()">Ciclos formativos Grado Medio</td>
+	</tr>
+	<tr>
+		<td name="menuGM" id="menuGM" style="display:none">
+			<ul>
+				<li> Informática </li>
+				<li> Automoción </li>
+				<li> Mecanizado </li>
+			</ul>
+		</td>
+	</tr>
+ 	<tr>
+		<td>Ciclos formativos Grado Superior</td>
+	</tr>
+	<tr>
+		<td style="display:none">
+			<ul>
+				<li> Informática </li>
+				<li> Robótica</li>
+				<li> Mecanizado </li>
+			</ul>
+		</td>
+	</tr>
+    <tr>
+		<td>Bachillerato</td>
+	</tr>
+	<tr>
+		<td style="display:none">
+			<ul>
+				<li> Humanidades </li>
+				<li> Ciencias</li>
+				<li> Tecnológico </li>
+			</ul>
+		</td>
+	</tr>
+ 
+  </table>
+ </body>
+</html>
