@@ -7,14 +7,52 @@
   <meta name="Keywords" content="">
   <meta name="Description" content="">
   <title>04-Menus.html</title>
- </head>
+  <script language="JavaScript">
+    function gradoBasico()
+    {
+        //document.getElementById("menuGB").display="";
+        if(menuGB.style.display=="none")
+        {
+          menuGB.style.display="";  
+        }
+        else
+        {
+            menuGB.style.display="none";
+        }
+    }
+    function gradoMedio()
+    {
+        //document.getElementById("menuGM").display="";
+        if(menuGM.style.display=="none")
+        {
+          menuGM.style.display="";  
+        }
+        else
+        {
+            menuGM.style.display="none";
+        }
+    }
+    function gradoSuperior()
+    {
+        //document.getElementById("menuGS").display="";
+        if(menuGS.style.display=="none")
+        {
+          menuGS.style.display="";  
+        }
+        else
+        {
+            menuGS.style.display="none";
+        }
+    }
+  </script>
+ </head> 
  <body>
-        <table border="2" align="center" width="50%">
+        <table border="2" align="center" width="50%" style="cursor:pointer">
         <tr>
-            <td>Cilos Formativos Grado Basico</td>
+            <td onmouseover="gradoBasico()">Cilos Formativos Grado Basico</td>
         </tr>
         <tr>
-            <td>
+            <td name="menuGB" id="menuGB" style="display:none">
                 <ul>
                     <li>Electricidad y Electrónica</li>
                     <li>Informática y comunicaciones</li>
@@ -22,10 +60,10 @@
             </td>
         </tr>
         <tr>
-            <td>Cilos Formativos Grado Medio</td>
+            <td onmouseover="gradoMedio()">Cilos Formativos Grado Medio</td>
         </tr>
         <tr>
-            <td>
+            <td name="menuGM" id="menuGM" style="display:none">
                 <ul>
                     <li>Sistemas Microinformáticos y Redes</li>
                     <li>Electromecánica de Vehículos Automóviles</li>
@@ -36,10 +74,10 @@
             </td>
         </tr>
         <tr>
-            <td>Cilos Formativos Grado Superior</td>
+            <td onmouseover="gradoSuperior()">Cilos Formativos Grado Superior</td>
         </tr>
         <tr>
-            <td>
+            <td name="menuGS" id="menuGS" style="display:none">
                 <ul>
                     <li>Programación de la Producción en Fabricación Mecánica</li>
                     <li>Automatización y Robótica industrial</li>
