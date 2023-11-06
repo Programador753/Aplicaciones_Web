@@ -6,34 +6,17 @@
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
-  <title>04-Menus.html</title>
+  <title>04-Menus_b.html</title>
   <script language="JavaScript">
-    function cambiar(opcion)
+    function cambiar(seccion)
     {
-        //document.getElementById("menuGB").display="";
-        if(opcion==1)
+        if(seccion.style.display=="none")
         {
-            menuGB.style.display="";  
+            seccion.style.display="";
         }
         else
         {
-            menuGB.style.display="none";
-        }
-        if(opcion==2)
-        {
-            menuGM.style.display="";  
-        }
-        else
-        {
-            menuGM.style.display="none";
-        }
-        if(opcion==3)
-        {
-            menuGS.style.display="";  
-        }
-        else
-        {
-            menuGS.style.display="none";
+            seccion.style.display="none";
         }
     }
   </script>
@@ -41,7 +24,7 @@
  <body>
         <table border="2" align="center" width="50%" style="cursor:pointer">
         <tr>
-            <td onclick="cambiar(1)">Cilos Formativos Grado Basico</td>
+            <td onclick="cambiar(menuGB)">Cilos Formativos Grado Basico</td>
         </tr>
         <tr>
             <td name="menuGB" id="menuGB" style="display:none">
@@ -52,7 +35,7 @@
             </td>
         </tr>
         <tr>
-            <td onclick="cambiar(2)">Cilos Formativos Grado Medio</td>
+            <td onclick="cambiar(menuGM)">Cilos Formativos Grado Medio</td>
         </tr>
         <tr>
             <td name="menuGM" id="menuGM" style="display:none">
@@ -66,7 +49,7 @@
             </td>
         </tr>
         <tr>
-            <td onclick="cambiar(3)">Cilos Formativos Grado Superior</td>
+            <td onclick="cambiar(menuGS)">Cilos Formativos Grado Superior</td>
         </tr>
         <tr>
             <td name="menuGS" id="menuGS" style="display:none">
