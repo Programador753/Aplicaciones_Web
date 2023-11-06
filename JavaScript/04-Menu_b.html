@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>04-Menus_b.html</title>
+  <script language="JavaScript">
+	function cambiar(opcion)
+	{
+		if(opcion == 1)
+		{
+			if(menuGM.style.display=="none")
+			{
+			menuGM.style.display="";
+			}
+			else
+			{
+			menuGM.style.display="none";
+			}
+		}
+		if(opcion == 2)
+		{
+			if(menuGS.style.display=="none")
+			{
+			menuGS.style.display="";
+			}
+			else
+			{
+			menuGS.style.display="none";
+			}
+		}
+		if(opcion == 3)
+		{
+			if(menuBAC.style.display=="none")
+			{
+			menuBAC.style.display="";
+			}
+			else
+			{
+			menuBAC.style.display="none";
+			}
+		}
+
+
+	}
+  </script>
+ </head>
+ <body>
+  <table style="cursor:pointer">
+	<tr>
+		<td onclick="cambiar(1)">Ciclos formativos Grado Medio</td>
+	</tr>
+	<tr>
+		<td name="menuGM" id="menuGM" style="display:none">
+			<ul>
+				<li> Informática </li>
+				<li> Automoción </li>
+				<li> Mecanizado </li>
+			</ul>
+		</td>
+	</tr>
+ 	<tr>
+		<td onclick="cambiar(2)">Ciclos formativos Grado Superior</td>
+	</tr>
+	<tr>
+		<td name="menuGS" id="menuGS" style="display:none">
+			<ul>
+				<li> Informática </li>
+				<li> Robótica</li>
+				<li> Mecanizado </li>
+			</ul>
+		</td>
+	</tr>
+    <tr>
+		<td onclick="cambiar(3)">Bachillerato</td>
+	</tr>
+	<tr>
+		<td style="display:none" name="menuBAC" id="menuBAC">
+			<ul>
+				<li> Humanidades </li>
+				<li> Ciencias</li>
+				<li> Tecnológico </li>
+			</ul>
+		</td>
+	</tr>
+ 
+  </table>
+ </body>
+</html>
