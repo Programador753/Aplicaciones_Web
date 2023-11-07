@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>05-Arrays.html</title>
+<script language="JavaScript">
+var a=1;
+function visor() 
+{
+    a = a + 1
+    if (a==1)
+    {
+    foto.src="./Imagenes/logo.png"
+    }
+    if (a==2)
+    {
+    foto.src="./Imagenes/Patio.jpg"
+    }
+    if (a==3)
+    {
+    foto.src="./Imagenes/logo_tiempo.jpg"
+    }
+    if (a==4)
+    {
+    foto.src="./Imagenes/Logo_of_Twitter.svg.png"
+    a=0;
+    }
+}
+</script>
+ </head>
+ <body>
+<input type="button" value="Cambiar" onclick="visor()">
+<img name="foto" id="foto" src="./Imagenes/logo.png" width="400">
+ </body>
+</html>
