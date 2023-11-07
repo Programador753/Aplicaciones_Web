@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+<script language="JavaScript">
+    var aleatorio = 0;
+    var intentos = 3;
+    function intento()
+    {
+        intentos = intentos - 1;
+        if(intentos == 0)
+        {
+            window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        }
+    }
+    function Generar()
+    {
+        aleatorio = Math.floor(Math.random()*10)+1;
+    }
+    function Comprobar()
+    {
+        intento();
+        if(numero.value > aleatorio)
+        {
+            window.alert("El numero introducido es mayor");
+        }
+        else if(numero.value < aleatorio)
+        {
+            window.alert("El numero introducido es menor");
+        }
+        else
+        {
+            window.alert("¡¡¡Has acertado!!!");
+            intentos = 3;
+        }
+
+    }
+</script>
+ </head>
+ <body onload="Generar()">
+    <input type="text" name="numero" id="numero">
+    <br>
+    <input type="button" value="Comprobar" onclick="Comprobar()">
+ </body>
+</html>
