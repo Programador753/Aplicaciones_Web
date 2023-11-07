@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>05-Arrays_d.html</title>
+<script language="JavaScript">
+var a=1; // Declaramos la variable que utilizaremos como contador de imagenes.
+imagenes = new Array(); // Declaramos un array.
+imagenes[1] = "./Imagenes/logo.png"; // Cargamos las imagenes en el array.
+imagenes[2] = "./Imagenes/Patio.jpg"; // Cargamos las imagenes en el array.
+imagenes[3] = "./Imagenes/logo_tiempo.jpg"; // Cargamos las imagenes en el array.
+imagenes[4] = "./Imagenes/Logo_of_Twitter.svg.png"; // Cargamos las imagenes en el array.
+imagenes[5] = "./Imagenes/Flag_of_Germany.svg.png"; // Cargamos las imagenes en el array.
+imagenes[6] = "./Imagenes/Flag_of_the_United_Kingdom_(1-2).svg.png"; // Cargamos las imagenes en el array.
+imagenes[7] = "./Imagenes/Bandera_de_España.svg.png"; // Cargamos las imagenes en el array.
+imagenes[8] = "./Imagenes/zaragoza-portada.jpg"; // Cargamos las imagenes en el array.
+imagenes[9] = "./Imagenes/Zaragoza.jpg"; // Cargamos las imagenes en el array.
+imagenes[10] = "./Imagenes/Facebook_icon_2013.svg.png"; // Cargamos las imagenes en el array.
+function visor() 
+{
+    a = Math.floor(Math.random()*10)+1; // Generamos un numero aleatorio entre 1 y 10.
+    foto.src=imagenes[a]; // Cambiamos la imagen por la siguiente del array.
+}
+</script>
+ </head>
+ <body>
+    <input type="button" value="Cambiar" onclick="visor()"> <!-- Boton para cambiar la imagen -->
+    <img name="foto" id="foto" src="./Imagenes/logo.png" width="400"> 
+ </body>
+</html>
