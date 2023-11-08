@@ -6,42 +6,47 @@
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
-  <title>06-Aleatorios_Juego.html</title>
+  <title>06-Aleatorios_Juego_b.html</title>
 <script language="JavaScript">
     var aleatorio = 0;
-    var intentos = 3;
+    var intentos = 100;
+        var inicio = 1;
+        var fin = 100;
+    
+    function recargar() 
+    {
+        window.location.href = window.location.href;
+    }
     function intento()
     {
         intentos = intentos - 1;
         if(intentos == 0)
         {
-        /*  juego.style.display="none";
-            fin.style.display="";
-        */
             window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
         }
     }
     function Generar()
     {
-        aleatorio = Math.floor(Math.random()*10)+1;
+        aleatorio = Math.floor(Math.random()*100)+1;
+        window.alert("Introduce un numero entre: "+inicio+" y "+fin);
     }
     function Comprobar()
-    { 
+    {
         intento();
         if(numero.value > aleatorio)
         {
-            window.alert("El numero introducido es mayor");
+            fin=numero.value;
+            window.alert("Introduce un numero entre: "+inicio+" y "+fin);
         }
         else if(numero.value < aleatorio)
         {
-            window.alert("El numero introducido es menor.");
-            
+            inicio=numero.value;
+            window.alert("Introduce un numero entre: "+inicio+" y "+fin);
         }
         else
         {
             window.alert("¡¡¡Has acertado!!!");
-            intentos = 3;
-            Generar();
+            recargar();
         }
     }
 </script>
@@ -52,6 +57,5 @@
         <br>
         <input type="button" value="Comprobar" onclick="Comprobar()">    
     </div>
-    <h1 name="fin" id="fin" style="display:none"> Has acabado el juego por superar el numero de intentos </h1>
  </body>
 </html>
