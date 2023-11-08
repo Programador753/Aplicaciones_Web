@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>06-Aleatorios_Juego_c.html</title>
+<script language="JavaScript">
+    var aleatorio = 0;
+    var intentos = 3;
+        var inicio = 1;
+        var fin = 100;
+    
+    function recargar() 
+    {
+        window.location.href = window.location.href;
+    }
+    function intento()
+    {
+        intentos = intentos - 1;
+        if(intentos == 0)
+        {
+            juego.style.display="none";
+            mensajefin.innerHTML="Has PERDIDO!!! El nuemero era el " +aleatorio;
+            mensajefin.style.display="";
+        }
+    }
+    function Generar()
+    {
+        aleatorio = Math.floor(Math.random()*100)+1;
+        mensaje.innerHTML="Introduce un numero entre: "+inicio+" y "+fin; // para mostrar mensajes en el contenido de un parrafo
+        mensaje2.innerHTML=" Te quedan: "+intentos+" intentos"; //Mostramos intentos restantes
+    }
+    function Comprobar()
+    {
+        intento();
+        if(numero.value > aleatorio)
+        {
+            fin=numero.value;
+            mensaje.innerHTML="Introduce un numero entre: "+inicio+" y "+fin; // para mostrar mensajes en el contenido de un parrafo
+            mensaje2.innerHTML=" Te quedan: "+intentos+" intentos"; //Mostramos intentos restantes
+        }
+        else if(numero.value < aleatorio)
+        {
+            inicio=numero.value;
+            mensaje.innerHTML="Introduce un numero entre: "+inicio+" y "+fin; // para mostrar mensajes en el contenido de un parrafo
+            mensaje2.innerHTML=" Te quedan: "+intentos+" intentos"; //Mostramos intentos restantes
+        }
+        else
+        {
+            window.alert("¡¡¡HAS GANADO!!!");
+            recargar();
+        }
+    }
+</script>
+ </head>
+ <body onload="Generar()">
+    <div name="juego" id="juego">
+        <p name="mensaje" id="mensaje"></p>
+        <p name="mensaje2" id="mensaje2"></p>
+        <br>
+        <input type="text" name="numero" id="numero">
+        <br><br>
+        <input type="button" value="Comprobar" onclick="Comprobar()">    
+    </div>
+    <h1 name="mensajefin" id="mensajefin" style="display:none"> </h1>
+ </body>
+</html>
