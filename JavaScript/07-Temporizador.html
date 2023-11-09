@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>07-Temporizador.html</title>
+<script language="JavaScript">
+var a=1; // Declaramos la variable que utilizaremos como contador de imagenes.
+imagenes = new Array(); // Declaramos un array.
+imagenes[1] = "./Imagenes/logo.png"; // Cargamos las imagenes en el array.
+imagenes[2] = "./Imagenes/Patio.jpg"; // Cargamos las imagenes en el array.
+imagenes[3] = "./Imagenes/logo_tiempo.jpg"; // Cargamos las imagenes en el array.
+imagenes[4] = "./Imagenes/Logo_of_Twitter.svg.png"; // Cargamos las imagenes en el array.
+
+function Empezar() 
+{
+    a=a+1; // Incrementamos el valor de la variable a en 1.
+    foto.src=imagenes[a]; // Cambiamos la imagen por la siguiente del array.
+    if(a==4)
+    {
+        a=0; // Si el valor de a es 4, lo ponemos a 0.
+    }
+    temp1=setTimeout("Empezar()",1000);
+    inicio.style.display="none";
+    parar.style.display="";
+}
+
+function Parar()
+{
+    clearTimeout(temp1);
+    inicio.style.display="";
+    parar.style.display="none";
+}
+</script>
+ </head>
+ <body>
+    <input type="button" name="inicio" id="inicio" value="Arrancar" onclick="Empezar()"> 
+    <br>
+    <input type="button" name="parar" id="parar" value="Parar" onclick="Parar()" style="display:none"> 
+    <br><br>
+    <img name="foto" id="foto" src="./Imagenes/logo.png" width="400"> 
+ </body>
+</html>
