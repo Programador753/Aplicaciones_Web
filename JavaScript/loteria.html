@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>05-Arrays_c.html</title>
+<script language="JavaScript">
+var a=1; // Declaramos la variable que utilizaremos como contador de imagenes.
+imagenes = new Array(); // Declaramos un array.
+imagenes[1] = "./Imagenes/0.jpg"; // Cargamos las imagenes en el array.
+imagenes[2] = "./Imagenes/1.jpg"; // Cargamos las imagenes en el array.
+imagenes[3] = "./Imagenes/2.jpg"; // Cargamos las imagenes en el array.
+imagenes[4] = "./Imagenes/3.jpg"; // Cargamos las imagenes en el array.
+imagenes[5] = "./Imagenes/4.jpg"; // Cargamos las imagenes en el array.
+imagenes[6] = "./Imagenes/5.jpg"; // Cargamos las imagenes en el array.
+imagenes[7] = "./Imagenes/6.jpg"; // Cargamos las imagenes en el array.
+imagenes[8] = "./Imagenes/7.jpg"; // Cargamos las imagenes en el array.
+imagenes[9] = "./Imagenes/8.jpg"; // Cargamos las imagenes en el array.
+imagenes[10] = "./Imagenes/9.jpg"; // Cargamos las imagenes en el array.
+function Empezar() 
+{
+    a=Math.floor(Math.random()*10)+1;// Incrementamos el valor de la variable a en 1.
+    b=Math.floor(Math.random()*10)+1;// Incrementamos el valor de la variable a en 1.
+    c=Math.floor(Math.random()*10)+1;// Incrementamos el valor de la variable a en 1.
+    d=Math.floor(Math.random()*10)+1;// Incrementamos el valor de la variable a en 1.
+    e=Math.floor(Math.random()*10)+1;// Incrementamos el valor de la variable a en 1.
+    foto1.src=imagenes[a]; // Cambiamos la imagen por la siguiente del array.
+    foto2.src=imagenes[b]; // Cambiamos la imagen por la siguiente del array.
+    foto3.src=imagenes[c]; // Cambiamos la imagen por la siguiente del array.
+    foto4.src=imagenes[d]; // Cambiamos la imagen por la siguiente del array.
+    foto5.src=imagenes[e]; // Cambiamos la imagen por la siguiente del array.
+    temp1=setTimeout("Empezar()",10);
+    inicio.style.display="none";
+    parar.style.display="";
+}
+
+function Parar()
+{
+    clearTimeout(temp1);
+    inicio.style.display="";
+    parar.style.display="none";
+}
+</script>
+ </head>
+ <body>
+<table align="center" width="80">
+    <tr>
+        <td><img name="foto1" id="foto1" src="./Imagenes/0.jpg" width="150"></td>
+        <td><img name="foto2" id="foto2" src="./Imagenes/0.jpg" width="150"></td>
+        <td><img name="foto3" id="foto3" src="./Imagenes/0.jpg" width="150"></td>
+        <td><img name="foto4" id="foto4" src="./Imagenes/0.jpg" width="150"></td>
+        <td><img name="foto5" id="foto5" src="./Imagenes/0.jpg" width="150"></td>
+    </tr>
+    <tr>
+        <td colspan="5" align="center">
+            <input type="button" name="inicio" id="inicio" value="Arrancar" onclick="Empezar()"> 
+            <br>
+            <input type="button" name="parar" id="parar" value="Parar" onclick="Parar()" style="display:none"> 
+        </td>
+    </tr>
+</table>
+ </body>
+</html>
