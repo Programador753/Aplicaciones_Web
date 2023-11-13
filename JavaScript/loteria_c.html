@@ -22,59 +22,82 @@
             a = Math.floor(Math.random()*10)+1;
             primero.src=imagenes[a];
             temp1=setTimeout("visor1()",100);
-            arrancar.style.display="none";
-            para.style.display="";
         }
         function visor2()
         {
             a = Math.floor(Math.random()*10)+1;
             segundo.src=imagenes[a];
             temp2=setTimeout("visor2()",100);
-            arrancar.style.display="none";
-            para.style.display="";
         }
         function visor3()
         {
             a = Math.floor(Math.random()*10)+1;
             tercero.src=imagenes[a];
             temp3=setTimeout("visor3()",100);
-            arrancar.style.display="none";
-            para.style.display="";
         }
         function visor4()
         {
             a = Math.floor(Math.random()*10)+1;
             cuarto.src=imagenes[a];
             temp4=setTimeout("visor4()",100);
-            arrancar.style.display="none";
-            para.style.display="";
         }
         function visor5()
         {
             a = Math.floor(Math.random()*10)+1; 
             quinto.src=imagenes[a];
             temp5=setTimeout("visor5()",100);
-            arrancar.style.display="none";
-            para.style.display="";
         }
-        function parar()
+        function parar(valor)
         {
-            clearTimeout(temp1);
-            clearTimeout(temp2);
-            clearTimeout(temp3);
-            clearTimeout(temp4);
-            clearTimeout(temp5);
-            arrancar.style.display=""
-            para.style.display="none"
+            if(valor==1)
+            {
+              clearTimeout(temp1); 
+              para1.style.display="none"; 
+            }
+            if(valor==2)
+            {
+              clearTimeout(temp2);
+              para2.style.display="none";
+              para1.style.display="";  
+            }
+            if(valor==3)
+            {
+              clearTimeout(temp3);  
+              para3.style.display="none";
+              para2.style.display="";
+            }
+            if(valor==4)
+            {
+              clearTimeout(temp4);  
+              para4.style.display="none";
+              para3.style.display="";
+            }
+            if(valor==5)
+            {
+              clearTimeout(temp5);
+              para5.style.display="none";
+              para4.style.display="";
+            }
         }
     </script>
 </head>
-<body align="center" background="./NUMEROS/1479923579navidad8.jpg" >    
+<body align="center" background="./NUMEROS/1479923579navidad8.jpg" onload="visor1(),visor2(),visor3(),visor4(),visor5()">    
     <table align="center" width="60%" cellpadding="40" >
         <tr>
-            <td colspan="5" >
-                <input type="button" value="GENERAR" onclick="visor1(),visor2(),visor3(),visor4(),visor5()" name="arrancar" id="arrancar">
-                <input style="display: none;" type="button" value="PARAR" onclick="parar()" name="para" id="para">
+            <td>
+                <input style="display: none;" type="button" value="PARAR" onclick="parar(1)" name="para1" id="para1">
+            </td>
+            <td>
+                <input style="display: none;" type="button" value="PARAR" onclick="parar(2)" name="para2" id="para2">
+            </td>
+            <td>
+                <input style="display: none;" type="button" value="PARAR" onclick="parar(3)" name="para3" id="para3">
+            </td>
+            <td>
+                <input style="display: none;" type="button" value="PARAR" onclick="parar(4)" name="para4" id="para4">
+            </td>
+            <td>
+                <input type="button" value="PARAR" onclick="parar(5)" name="para5" id="para5">
             </td>
         </tr>
         <tr>
