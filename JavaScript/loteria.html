@@ -1,66 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta name="Generator" content="EditPlus®">
-  <meta name="Author" content="">
-  <meta name="Keywords" content="">
-  <meta name="Description" content="">
-  <title>Loteria.html</title>
-<script language="JavaScript">
-imagenes = new Array(); // Declaramos un array.
-imagenes[1] = "./Imagenes/0.jpg"; // Cargamos las imagenes en el array.
-imagenes[2] = "./Imagenes/1.jpg"; // Cargamos las imagenes en el array.
-imagenes[3] = "./Imagenes/2.jpg"; // Cargamos las imagenes en el array.
-imagenes[4] = "./Imagenes/3.jpg"; // Cargamos las imagenes en el array.
-imagenes[5] = "./Imagenes/4.jpg"; // Cargamos las imagenes en el array.
-imagenes[6] = "./Imagenes/5.jpg"; // Cargamos las imagenes en el array.
-imagenes[7] = "./Imagenes/6.jpg"; // Cargamos las imagenes en el array.
-imagenes[8] = "./Imagenes/7.jpg"; // Cargamos las imagenes en el array.
-imagenes[9] = "./Imagenes/8.jpg"; // Cargamos las imagenes en el array.
-imagenes[10] = "./Imagenes/9.jpg"; // Cargamos las imagenes en el array.
-function Empezar() 
-{
-    a=Math.floor(Math.random()*10)+1;// Incrementamos el valor de la variable a en 1.
-    b=Math.floor(Math.random()*10)+1;// Incrementamos el valor de la variable a en 1.
-    c=Math.floor(Math.random()*10)+1;// Incrementamos el valor de la variable a en 1.
-    d=Math.floor(Math.random()*10)+1;// Incrementamos el valor de la variable a en 1.
-    e=Math.floor(Math.random()*10)+1;// Incrementamos el valor de la variable a en 1.
-    foto1.src=imagenes[a]; // Cambiamos la imagen por la siguiente del array.
-    foto2.src=imagenes[b]; // Cambiamos la imagen por la siguiente del array.
-    foto3.src=imagenes[c]; // Cambiamos la imagen por la siguiente del array.
-    foto4.src=imagenes[d]; // Cambiamos la imagen por la siguiente del array.
-    foto5.src=imagenes[e]; // Cambiamos la imagen por la siguiente del array.
-    temp1=setTimeout("Empezar()",30);
-    inicio.style.display="none";
-    parar.style.display="";
-}
-
-function Parar()
-{
-    clearTimeout(temp1);
-    inicio.style.display="";
-    parar.style.display="none";
-}
-</script>
- </head>
- <body>
-<table align="center" width="80" border="1">
-    <tr>
-        <td><img name="foto1" id="foto1" src="./Imagenes/0.jpg" width="150"></td>
-        <td><img name="foto2" id="foto2" src="./Imagenes/0.jpg" width="150"></td>
-        <td><img name="foto3" id="foto3" src="./Imagenes/0.jpg" width="150"></td>
-        <td><img name="foto4" id="foto4" src="./Imagenes/0.jpg" width="150"></td>
-        <td><img name="foto5" id="foto5" src="./Imagenes/0.jpg" width="150"></td>
-    </tr>
-    <br>
-    <tr>
-        <td colspan="5" align="center">
-            <input type="button" name="inicio" id="inicio" value="Arrancar" onclick="Empezar()"> 
-            <br>
-            <input type="button" name="parar" id="parar" value="Parar" onclick="Parar()" style="display:none"> 
-        </td>
-    </tr>
-</table>
- </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07-Temporizador.html</title>
+    <script language="JavaScript">
+        var a = 0;
+        imagenes = new Array(); 
+        imagenes[1]="./NUMEROS/0.png";
+        imagenes[2]="./NUMEROS/1.png";
+        imagenes[3]="./NUMEROS/2.png";
+        imagenes[4]="./NUMEROS/3.png";
+        imagenes[5]="./NUMEROS/4.png";
+        imagenes[6]="./NUMEROS/5.png";
+        imagenes[7]="./NUMEROS/6.png";
+        imagenes[8]="./NUMEROS/7.png";
+        imagenes[9]="./NUMEROS/8.png";
+        imagenes[10]="./NUMEROS/9.png";
+        function visor1()
+        {
+            a = Math.floor(Math.random()*10)+1;
+            primero.src=imagenes[a];
+            temp1=setTimeout("visor1()",100);
+            arrancar.style.display="none";
+            para.style.display="";
+        }
+        function visor2()
+        {
+            a = Math.floor(Math.random()*10)+1;
+            segundo.src=imagenes[a];
+            temp2=setTimeout("visor2()",100);
+            arrancar.style.display="none";
+            para.style.display="";
+        }
+        function visor3()
+        {
+            a = Math.floor(Math.random()*10)+1;
+            tercero.src=imagenes[a];
+            temp3=setTimeout("visor3()",100);
+            arrancar.style.display="none";
+            para.style.display="";
+        }
+        function visor4()
+        {
+            a = Math.floor(Math.random()*10)+1;
+            cuarto.src=imagenes[a];
+            temp4=setTimeout("visor4()",100);
+            arrancar.style.display="none";
+            para.style.display="";
+        }
+        function visor5()
+        {
+            a = Math.floor(Math.random()*10)+1; 
+            quinto.src=imagenes[a];
+            temp5=setTimeout("visor5()",100);
+            arrancar.style.display="none";
+            para.style.display="";
+        }
+        function parar()
+        {
+            clearTimeout(temp1);
+            clearTimeout(temp2);
+            clearTimeout(temp3);
+            clearTimeout(temp4);
+            clearTimeout(temp5);
+            arrancar.style.display=""
+            para.style.display="none"
+        }
+    </script>
+</head>
+<body align="center" background="./NUMEROS/1479923579navidad8.jpg">    
+    <table align="center" width="60%" cellpadding="40" border="1">
+        <tr>
+            <td colspan="5" >
+                <input type="button" value="GENERAR" onclick="visor1(),visor2(),visor3(),visor4(),visor5()" name="arrancar" id="arrancar">
+                <input style="display: none;" type="button" value="PARAR" onclick="parar()" name="para" id="para">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="./NUMEROS/0.png" name="primero" id="primero" width="100">
+            </td>
+            <td>
+                <img src="./NUMEROS/0.png" name="segundo" id="segundo" width="100">
+            </td>
+            <td>
+                <img src="./NUMEROS/0.png" name="tercero" id="tercero" width="100">
+            </td>
+            <td>
+                <img src="./NUMEROS/0.png" name="cuarto" id="cuarto" width="100">
+            </td>
+            <td>
+                <img src="./NUMEROS/0.png" name="quinto" id="quinto" width="100">
+            </td>
+        </tr>
+    </table>
+</body>
 </html>
