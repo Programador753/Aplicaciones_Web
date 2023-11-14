@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>09-Movimientos.html</title>
+<script language="JavaScript">
+    
+    var izdo=0;
+    var sup=0;
+    function mover()
+    {
+        izdo=Math.floor(Math.random()*800);// Incrementamos el valor de la variable a en 1.
+        sup=Math.floor(Math.random()*500);// Incrementamos el valor de la variable a en 1.
+        mosquito1.style.left=izdo+"px";
+        mosquito1.style.top=sup+"px";
+        temp1=setTimeout("mover()",500);
+    }
+    function comprobar(elemento)
+    {
+        elemento.style.display="none";
+        clearTimeout(temp1);
+
+    }
+
+</script> 
+</head>
+ <body onload="mover()">
+    <img name="mosquito1" id="mosquito1" src="./Imagenes/mosquito.gif" width="200" style="position:absolute" onclick="comprobar(mosquito1)">
+ </body>
+</html>

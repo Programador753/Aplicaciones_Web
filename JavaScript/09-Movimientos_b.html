@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>09-Movimientos.html</title>
+<script language="JavaScript">
+// Crear un objeto para mapear los nombres de los elementos a sus temporizadores
+var temporizadores = {};
+    var izdo=0;
+    var sup=0;
+    function mover1()
+    {
+        var izdo=0;
+        var sup=0;
+        izdo=Math.floor(Math.random()*800);// Incrementamos el valor de la variable a en 1.
+        sup=Math.floor(Math.random()*500);// Incrementamos el valor de la variable a en 1.
+        mosquito1.style.left=izdo+"px";
+        mosquito1.style.top=sup+"px";
+        temporizadores['mosquito1'] = setTimeout(mover1, 1000);
+    }
+    function mover2()
+    {
+        var izdo=0;
+        var sup=0;
+        izdo=Math.floor(Math.random()*800);// Incrementamos el valor de la variable a en 1.
+        sup=Math.floor(Math.random()*500);// Incrementamos el valor de la variable a en 1.
+        mosquito2.style.left=izdo+"px";
+        mosquito2.style.top=sup+"px";
+        temporizadores['mosquito2'] = setTimeout(mover2, 1000);
+    }
+    function mover3()
+    {
+        var izdo=0;
+        var sup=0;
+        izdo=Math.floor(Math.random()*800);// Incrementamos el valor de la variable a en 1.
+        sup=Math.floor(Math.random()*500);// Incrementamos el valor de la variable a en 1.
+        mosquito3.style.left=izdo+"px";
+        mosquito3.style.top=sup+"px";
+        temporizadores['mosquito3'] = setTimeout(mover3, 1000);
+    }
+    function comprobar(elemento)
+    {
+        elemento.style.display="none";
+        clearTimeout(temporizadores[elemento.id]);
+
+    }
+    
+</script> 
+</head>
+ <body onload="mover1(), mover2(), mover3()">
+    <img name="mosquito1" id="mosquito1" src="./Imagenes/mosquito.gif" width="200" style="position:absolute" onclick="comprobar(mosquito1)">
+    <img name="mosquito2" id="mosquito2" src="./Imagenes/mosquito.gif" width="200" style="position:absolute" onclick="comprobar(mosquito2)">
+    <img name="mosquito3" id="mosquito3" src="./Imagenes/mosquito.gif" width="200" style="position:absolute" onclick="comprobar(mosquito3)">
+</body>
+</html>
