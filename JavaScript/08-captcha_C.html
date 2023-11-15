@@ -13,33 +13,33 @@ var a=0;
 var intentos=0;
 var fallos=0;
 imagenes = new Array(); // Declaramos un array.
-imagenes[1] = "./Imagenes/Captcha/captcha1.png"; // Cargamos las imagenes en el array.
-imagenes[2] = "./Imagenes/Captcha/captcha2.png"; // Cargamos las imagenes en el array.
-imagenes[3] = "./Imagenes/Captcha/captcha3.png"; // Cargamos las imagenes en el array.
-imagenes[4] = "./Imagenes/Captcha/captcha4.png"; // Cargamos las imagenes en el array.
-imagenes[5] = "./Imagenes/Captcha/captcha5.png"; // Cargamos las imagenes en el array.
-imagenes[6] = "./Imagenes/Captcha/captcha6.png"; // Cargamos las imagenes en el array.
-imagenes[7] = "./Imagenes/Captcha/captcha7.png"; // Cargamos las imagenes en el array.
-imagenes[8] = "./Imagenes/Captcha/captcha8.png"; // Cargamos las imagenes en el array.
-imagenes[9] = "./Imagenes/Captcha/captcha9.png"; // Cargamos las imagenes en el array.
-imagenes[10] = "./Imagenes/Captcha/captcha10.png"; // Cargamos las imagenes en el array.
+imagenes[1] = "<h3>Zuera, Caspe, Calamocha,<font color='red'> Jaca </font>, Biel</h3>"; 
+imagenes[2] = "<h3>Bardallur,Tella-Sin,Fuentes de Rubielos,Azlor,Lanaja,Alcampell,<font color='red'>Salas Altas</font>,Palomar de Arroyos</h3>"; 
+imagenes[3] = "<h3>Alerre, Velilla de Jiloca, Crivillén, Las Parras de Castellote, Singra, Cetina,<font color='red'>Alcañiz</font>Maluenda</h3>"; 
+imagenes[4] = "<h3>Jaca, Caspe, Calamocha,<font color='red'> Zuera</font>, Biel</h3>";
+imagenes[5] = "<h3>Alerre, Velilla de Jiloca, Crivillén, Las Parras de Castellote, Singra, Cetina, Alcañiz<font color='red'>Maluenda</font></h3>"; 
+imagenes[6] = "<h3>Bardallur,Tella-Sin,Fuentes de Rubielos,Azlor,Lanaja, Salas Altas,<font color='red'>Alcampell</font>,Palomar de Arroyos</h3>"; 
+imagenes[7] = "<h3>Zuera, Caspe, Calamocha,<font color='red'> Huesca</font>, Biel</h3>"; 
+imagenes[8] = "<h3>Alerre, Velilla de Jiloca, Crivillén, Las Parras de Castellote, Singra, Cetina,<font color='red'>Teruel</font>Maluenda</h3>"; 
+imagenes[9] = "<h3>Bardallur,Tella-Sin,Fuentes de Rubielos,Azlor,Lanaja, Salas Altas,<font color='red'>Barbastro</font>,Palomar de Arroyos</h3>"; 
+imagenes[10] = "<h3>Zuera, Caspe, Calamocha,<font color='red'>Zaragoza </font>, Biel</h3>"; 
 
 textoimagen = new Array();
-textoimagen[1] = "TK58P"; //Valor de texto de la imagen del array
-textoimagen[2] = "B4T9S"; //Valor de texto de la imagen del array
-textoimagen[3] = "WB3CX"; //Valor de texto de la imagen del array
-textoimagen[4] = "MCSXH"; //Valor de texto de la imagen del array
-textoimagen[5] = "9M4BP"; //Valor de texto de la imagen del array
-textoimagen[6] = "DT6JX"; //Valor de texto de la imagen del array
-textoimagen[7] = "N8C6H"; //Valor de texto de la imagen del array
-textoimagen[8] = "6AR8R"; //Valor de texto de la imagen del array
-textoimagen[9] = "DWXM5"; //Valor de texto de la imagen del array
-textoimagen[10] = "4NV3A"; //Valor de texto de la imagen del array
+textoimagen[1] = "Jaca"; //Valor de texto de la imagen del array
+textoimagen[2] = "Salas Altas"; //Valor de texto de la imagen del array
+textoimagen[3] = "Alcañiz"; //Valor de texto de la imagen del array
+textoimagen[4] = "Zuera"; //Valor de texto de la imagen del array
+textoimagen[5] = "Maluenda"; //Valor de texto de la imagen del array
+textoimagen[6] = "Alcampell"; //Valor de texto de la imagen del array
+textoimagen[7] = "Huesca"; //Valor de texto de la imagen del array
+textoimagen[8] = "Teruel"; //Valor de texto de la imagen del array
+textoimagen[9] = "Barbastro"; //Valor de texto de la imagen del array
+textoimagen[10] = "Zaragoza"; //Valor de texto de la imagen del array
 
 function Generar() 
 {
   a=Math.floor(Math.random()*10)+1;// Incrementamos el valor de la variable a en 1.
-  foto.src=imagenes[a]; // Cambiamos la imagen por la siguiente del array.
+  foto.innerHTML=imagenes[a]; // Cambiamos la imagen por la siguiente del array.
 }
 function Chequear()
 {
@@ -78,7 +78,7 @@ function Chequear()
         El botón Comprobar tiene que llamar a una función que verifique si el texto introducido en el objeto input coincide con la imagen.
     -->
   <div name="info" id="info">
-    <img name="foto" id="foto" src="">
+    <p name="foto" id="foto"></p>
     <br>
     <input type="text" name="dato" id="dato">
     <input type="button" value="Comprobar" onclick="Chequear()">
