@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>09-Movimientos.html</title>
+<script language="JavaScript">
+// Crear un objeto para mapear los nombres de los elementos a sus temporizadores
+    var temporizadores = {};
+    var izdo=0;
+    var sup=0;
+
+    function mover1()
+    {
+        izdo=Math.floor(Math.random()*50);// Incrementamos el valor de la variable a en 1.
+        mosquito1.style.left=parseInt(mosquito1.style.left)+izdo+"px";
+        temporizadores['mosquito1'] = setTimeout(mover1, 1000);
+    }
+    function mover2()
+    {
+        izdo=Math.floor(Math.random()*50);// Incrementamos el valor de la variable a en 1.
+        mosquito2.style.left=parseInt(mosquito2.style.left)+izdo+"px";
+        temporizadores['mosquito2'] = setTimeout(mover2, 1000);
+    }
+</script> 
+</head>
+ <body name="cuerpo" id="cuerpo">
+    <input type="button" value="START" onclick="mover1(), mover2()">
+    <img name="mosquito1" id="mosquito1" src="./Imagenes/mosquito.gif" width="200" style="position:absolute;left:5px;top:100px" onclick="comprobar(mosquito1)">
+    <img name="mosquito2" id="mosquito2" src="./Imagenes/mosquito.gif" width="200" style="position:absolute;left:5px;top:300px" onclick="comprobar(mosquito2)">
+    <img src="./Imagenes/meta.jpg" name="meta" id="meta" style="position:absolute;left:1000px">
+</body>
+</html>
