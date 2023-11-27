@@ -7,6 +7,7 @@
   <meta name="Keywords" content="">
   <meta name="Description" content="">
   <title>10-Formularios.html</title>
+  
   <script language="JavaScript">
     function comprobarClave()
     {
@@ -43,6 +44,28 @@
         {
             window.alert("MATRICULA EN SEPTIEMBRE")
         }
+    }
+    function check2()
+    {
+        if(datos.seccion.value == 3 && datos.edad.value >= 18)
+        {
+            window.alert("NO SE PUEDE MATRICULAR")
+        }
+    }
+    function check3()
+    {
+    var deportes = document.getElementsByName('deportes');
+    var count = 0;
+
+    for (var i = 0; i < deportes.length; i++) {
+        if (deportes[i].checked) {
+            count++;
+        }
+    }
+
+    if (count > 1) {
+        window.alert("NO SE PUEDE MATRICULAR DOS DEPORTES A LA VEZ PORQUE TIENEN EL MISMO HORARIO");
+    }
     }
 </script>
  </head>
@@ -103,11 +126,11 @@
         <tr>
             <td>Actividades Extraescolares</td>
             <td>
-                Fútbol <input type="checkbox" name="extra" id="extra" value="1">
-                Baloncesto <input type="checkbox" name="extra" id="extra" value="2">
-                Voley <input type="checkbox" name="extra" id="extra" value="3">
-                Inglés <input type="checkbox" name="extra" id="extra" value="4">
-                Gimnasia <input type="checkbox" name="extra" id="extra" value="5">
+                Fútbol <input type="checkbox" name="deportes" id="deportes" value="1">
+                Baloncesto <input type="checkbox" name="deportes" id="deportes" value="2">
+                Voley <input type="checkbox" name="deportes" id="deportes" value="3">
+                Inglés <input type="checkbox" name="deportes" id="deportes" value="4">
+                Gimnasia <input type="checkbox" name="deportes" id="deportes" value="5">
             </td>
         </tr>
         <tr>
@@ -120,7 +143,7 @@
         </tr>
         <tr>
             <td colspan="2">
-                <input type="button" value="Chequear" onclick="Chequear()">
+                <input type="button" value="Chequear" onclick="Chequear(),check2(),check3()">
                 <input type="reset" value="Borrar">
                 <input type="submit" value="Enviar">
             </td>
