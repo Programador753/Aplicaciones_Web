@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<script language="JavaScript">
+
+		var a=1; // Declaramos la variable que utilizaremos como contador de imagenes.
+		var b=0;
+		var fallos = 0;
+
+		imagenes = new Array(); // Declaramos un array.
+		imagenes[1] = "./imagenes/bsh.jpg"; // Cargamos las imagenes en el array.
+		imagenes[2] = "./imagenes/caf.jpg"; // Cargamos las imagenes en el array.
+		imagenes[3] = "./imagenes/ayuntamiento.png"; // Cargamos las imagenes en el array.
+		imagenes[4] = "./imagenes/dga.jpg"; // Cargamos las imagenes en el array.
+		
+		enlaces = new Array(); // Declaramos un array.
+		enlaces[1] = "https://www.bsh-group.com/es/"; // Cargamos las imagenes en el array.
+		enlaces[2] = "https://www.caf.net/es/trabaja-caf/trabaja-caf.php"; // Cargamos las imagenes en el array.
+		enlaces[3] = "https://www.zaragoza.es/sede/"; // Cargamos las imagenes en el array.
+		enlaces[4] = "https://www.aragon.es/"; // Cargamos las imagenes en el array.
+	
+captcha = new Array(); // Declaramos un array.
+captcha[1] = "./Imagenes/Captcha/captcha1.png"; // Cargamos las imagenes en el array.
+captcha[2]  = "./Imagenes/Captcha/captcha2.png"; // Cargamos las imagenes en el array.
+captcha[3]  = "./Imagenes/Captcha/captcha3.png"; // Cargamos las imagenes en el array.
+captcha[4]  = "./Imagenes/Captcha/captcha4.png"; // Cargamos las imagenes en el array.
+captcha[5]  = "./Imagenes/Captcha/captcha5.png"; // Cargamos las imagenes en el array.
+
+textoimagen = new Array();
+textoimagen[1] = "TK58P"; //Valor de texto de la imagen del array
+textoimagen[2] = "B4T9S"; //Valor de texto de la imagen del array
+textoimagen[3] = "WB3CX"; //Valor de texto de la imagen del array
+textoimagen[4] = "MCSXH"; //Valor de texto de la imagen del array
+textoimagen[5] = "9M4BP"; //Valor de texto de la imagen del array
+
+function piefotos() 
+{
+		a=Math.floor(Math.random()*4)+1;
+		logo.src=imagenes[a]; // Cambiamos la imagen por la siguiente del array.
+		webenlace.href=enlaces[a];
+		temp1=setTimeout("piefotos()",500);
+}
+function Generar() 
+{
+  b=Math.floor(Math.random()*5)+1;// Incrementamos el valor de la variable a en 1.
+  foto.src=captcha[b]; // Cambiamos la imagen por la siguiente del array.
+}
+function Chequear()
+{
+  if(dato.value==textoimagen[b])
+  {
+    window.alert("Has acertado");
+	info.style.display="";
+	fallos=0;
+  }
+  else
+  {
+    
+    fallos=fallos+1;
+    intentos = 3 - fallos;
+    window.alert("Has fallado. Llevas " +fallos+ " intentos");
+    dato.value="";
+    if(fallos==3)
+    {
+      info.style.display="none";
+      window.alert("Imposible acceder a la encuesta por limite de intentos");
+      verificacion.style.display="none";
+    }
+
+  }
+}
+function cambiar() 
+{
+	Generar();
+ 	cambio.style.display="none";
+}
+</script>
+</HEAD>
+<body onload="piefotos();Generar()">
+<div class="contenedor" >
+	<div class="cabecera">
+		<img src="./imagenes/cabecera.jpg" border="0" usemap="#salesianos">
+		<map name="salesianos">
+			<area shape="rect" title="Salesianos" href="https://zaragoza.salesianos.edu" coords="20,26,78,84">
+		</map>
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a href="./index.html"> Inicio</a></li>
+				<li><a href="./noticias.html"> Noticias</a></li>
+				<li><a href="./colabora.html"> Colabora</a></li>
+				<li><a href="./encuesta.html"> Encuesta</a></li>
+			</ul>
+		</div>
+	<div class="cuerpo">
+
+	  <div name="verificacion" id="verificacion" style="display: '';"> 
+		<!-- Incorporar la petición del CAPTCHA -->
+		<img name="foto" id="foto" src="">
+		<br>
+		<input type="text" name="dato" id="dato">
+		<input type="button" value="Comprobar" onclick="Chequear()">
+		<input type="button" value="Cambiar" name="cambio" id="cambio" style="display: '';" onclick="cambiar()">
+	  </div>
+
+	  <div name="info" id="info" style="display: none;">
+		<table width="100%" border="1">
+			<tr>
+				<td colspan="4">Valora el servicio recibido en relación a la gestión realizada</td>
+			</tr>
+			<tr>
+				<td width="50%"></td>
+				<td align="center"><img src="./imagenes/muybien.png"></td>
+				<td align="center"><img src="./imagenes/bien.png"></td>
+				<td align="center"><img src="./imagenes/mal.png"></td>
+			</tr>
+			<tr>
+				<td>Rapidez en la respuesta</td>
+				<td><input type="radio" name="rapidez" id="rapidez" value="muybien"></td>
+				<td><input type="radio" name="rapidez" id="rapidez" value="bien"></td>
+				<td><input type="radio" name="rapidez" id="rapidez" value="mal"></td>
+			</tr>
+			<tr>
+				<td>Calidad del servicio</td>
+				<td><input type="radio" name="calidad" id="calidad" value="muybien"></td>
+				<td><input type="radio" name="calidad" id="calidad" value="bien"></td>
+				<td><input type="radio" name="calidad" id="calidad" value="mal"></td>
+			</tr>
+			<tr>
+				<td>Resolución de la incidencia</td>
+				<td><input type="radio" name="resolución" id="resolución" value="muybien"></td>
+				<td><input type="radio" name="resolución" id="resolución" value="bien"></td>
+				<td><input type="radio" name="resolución" id="resolución" value="mal"></td>
+			</tr>
+			<tr>
+				<td colspan="4" align="center"><a href="./index.html">Fin</a></td>
+			</tr>
+		</table>
+	  </div>
+	</div>
+
+	<div class="pie">
+			<a href="" name="webenlace" id="webenlace"><img src="" name="logo" id="logo"></a>
+	</div>
+
+</div>
+ 
+</body>
+</html>
+
