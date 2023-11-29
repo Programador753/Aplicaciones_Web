@@ -44,7 +44,7 @@ function comprobaremail()
        if (document.getElementById("email1").value != document.getElementById("email2").value)
         {
             window.alert("email NO COINCIDE");
-            datos.email1.focus();
+            document.getElementById("email1").focus();
 			enviar.style.display="none";
         }
 		else
@@ -61,7 +61,7 @@ function comprobaremail()
     }
     function comprobarciudad()
     {
-        if (document.getElementById("Ciudad").value == "Zaragoza" || "Huesca" || "Teruel")
+        if (document.getElementById("Ciudad").value == "Zaragoza" || document.getElementById("Ciudad").value == "Huesca" || document.getElementById("Ciudad").value == "Teruel")
         {
            window.alert("Por ser ARAGONES. Le llegara un email con un 15% de descuento en el proximo evento");
         }
@@ -123,7 +123,7 @@ function comprobaremail()
 					<td>Domicilio y Ciudad *</td>
 					<td><input type="text" name="domicilio" name="domicilio" placeholder="Domicilio" maxlenght="40" size="40" required></td>
 					<td>
-						<select name="Ciudad" id="Ciudad" required onblur="comprobarciudad()">
+						<select name="Ciudad" id="Ciudad" required onchange="comprobarciudad()">
 							<option selected value="">Elige Ciudad</option>
 							<option value="Zaragoza">Zaragoza</option>
 							<option value="Huesca">Huesca</option>
