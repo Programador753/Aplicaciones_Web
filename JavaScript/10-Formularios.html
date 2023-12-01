@@ -8,82 +8,85 @@
   <meta name="Description" content="">
   <title>10-Formularios.html</title>
   
-  <script language="JavaScript">
-    function comprobarClave()
+  <script language="JavaScript"> // Abrimos etiqueta script para escribir codigo JavaScript 
+    function comprobarClave() // Comprobar que las claves coinciden 
     {
        // if (datos.clave.value != datos.clave2.vlaue) // != -> Simbolo de distinto para hecer comparaciones
-       if (document.getElementById("clave").value != document.getElementById("clave2").value)
+       if (document.getElementById("clave").value != document.getElementById("clave2").value) // Si el valor del campo clave es distinto al valor del campo clave2 
         {
-            window.alert("Clave no coinciden");
-            datos.clave.focus();
-            datos.clave.select();
+            window.alert("Clave no coinciden"); // Mostramos mensaje de error
+            datos.clave.focus(); // Hacemos focus en el campo clave para que el usuario pueda corregirlo 
+            datos.clave.select(); // Seleccionamos el texto del campo clave para que el usuario pueda corregirlo 
         }
     }
-    function comprobarEdad()
+    function comprobarEdad() // Comprobar que no se matricule en septiembre si es menor de edad
     {
-        if (datos.edad.value < 18)
+        if (datos.edad.value < 18) // Si la edad es menor que 18 
         {
-            datos.obs.innerHTML="La persona inscrita tiene menos de 18 años";
+            datos.obs.innerHTML="La persona inscrita tiene menos de 18 años"; // Mostramos mensaje de error
         }
         else
         {
-            datos.obs.innerHTML="";
+            datos.obs.innerHTML=""; // Si no hay error no mostramos nada 
         }
     }
-    function comprobarPais()
+    function comprobarPais() // Comprobar que no se matricule en septiembre si es extranjero 
     {
         //if (datos.pais.vlaue != España)
-        if(datos.pais.value == "Alemania" || datos.pais.value == "Francia" || datos.pais.value == "Italia")
+        if(datos.pais.value == "Alemania" || datos.pais.value == "Francia" || datos.pais.value == "Italia") // Si el pais es Alemania, Francia o Italia 
         {
-            window.alert("Nacionalidad extranjera")
+            window.alert("Nacionalidad extranjera") // Mostramos mensaje de error
         }
     }
     function Chequear()
     {
-        if(datos.edad.value > 18 && datos.pais.value == "España")
+        if(datos.edad.value > 18 && datos.pais.value == "España") // Si la edad es mayor que 18 y el pais es España
         {
-            window.alert("MATRICULA EN SEPTIEMBRE")
+            window.alert("MATRICULA EN SEPTIEMBRE") // Mostramos mensaje de error 
         }
     }
-    function check2()
+    function check2() // Comprobar que no se matricule en ESO si es mayor de edad
     {
-        if(datos.seccion.value == 3 && datos.edad.value >= 18)
+        if(datos.seccion.value == 3 && datos.edad.value >= 18) // Si la seccion es ESO y la edad es mayor o igual a 18 
         {
-            window.alert("NO SE PUEDE MATRICULAR")
+            window.alert("NO SE PUEDE MATRICULAR") // Mostramos mensaje de error 
         }
     }
-    function check3()
+    function check3() // Comprobar que no se matricule en dos deportes a la vez  
     {
-    var deportes = document.getElementsByName('deportes');
-    var count = 0;
+    var deportes = document.getElementsByName('deportes'); // Array de elementos con el mismo nombre
+    var count = 0; // Contador para saber cuantos deportes se han seleccionado
 
-    for (var i = 0; i < deportes.length; i++) {
-        if (deportes[i].checked) {
-            count++;
+    for (var i = 0; i < deportes.length; i++) // En esste for recorremos el array de deportes y si esta seleccionado el deporte sumamos 1 al contador 
+    { 
+        if (deportes[i].checked) // deportes[i] -> Elemento del array deportes en la posicion i y checked -> si esta seleccionado o no 
+        {
+            count++; // Sumamos 1 al contador si esta seleccionado el deporte 
         }
     }
 
-    if (count > 1) {
-        window.alert("NO SE PUEDE MATRICULAR DOS DEPORTES A LA VEZ PORQUE TIENEN EL MISMO HORARIO");
+    if (count > 1)  // Si el contador es mayor que 1 es que se han seleccionado mas de un deporte 
+    {
+        window.alert("NO SE PUEDE MATRICULAR DOS DEPORTES A LA VEZ PORQUE TIENEN EL MISMO HORARIO"); // Mostramos mensaje de error 
     }
     }
 </script>
  </head>
  <body>
  <form action="07-Fin.html" name="datos" id="datos"> <!-- Abro etiqueta form (formulario)-->  
-    <table align="center" width="50%" border="1" cellpadding="5" cellspacing="5">
+    <table align="center" width="50%" border="1" cellpadding="5" cellspacing="5"> 
         <tr>
-            <td colspan="2" align="center" bgcolor="#759e70"><h2>FORMULARIO</h2></td>
+            <td colspan="2" align="center" bgcolor="#759e70"><h2>FORMULARIO</h2></td> 
         </tr>
         <tr>
             <td>Nombre y Apellidos</td>
-            <td><input type="text" name="nombre" id="nombre" placeholder="Max. 40 carácteres" maxlength="40" size="40"></td>
+            <td><input type="text" name="nombre" id="nombre" placeholder="Max. 40 carácteres" maxlength="40" size="40"></td> 
         </tr>
         <tr>
             <td>Password</td>
-            <td><input type="password" name="clave" id="clave" placeholder="" maxlength="10" size="10" required>
+            <td><input type="password" name="clave" id="clave" placeholder="" maxlength="10" size="10" required> 
                 &nbsp;&nbsp; Repite password para verificarlo 
-                <input type="password" name="clave2" id="clave2" placeholder="" maxlength="10" size="10" required onblur="comprobarClave()">
+                <input type="password" name="clave2" id="clave2" placeholder="" maxlength="10" size="10" required onblur="comprobarClave()"> <!-- onblur -> ejecutar al ir a pasar al siguiente campo que no sean cuadros desplegables -->
             </td>
         </tr>
         <tr>
@@ -91,11 +94,11 @@
         </tr>
         <tr>
             <td>Edad</td>
-            <td><input type="number" name="edad" id="edad" placeholder="" onblur="comprobarEdad()"></td>
+            <td><input type="number" name="edad" id="edad" placeholder="" onblur="comprobarEdad()"></td> 
         </tr>
         <tr>
             <td>Email</td>
-            <td><input type="email" name="correo" id="correo" placeholder="" maxlength="60" size="40" required></td>
+            <td><input type="email" name="correo" id="correo" placeholder="" maxlength="60" size="40" required></td> 
         </tr>
         <tr>
             <td>Fecha de Matricula</td>
@@ -104,7 +107,7 @@
         <tr>
             <td>País</td>
             <td>
-                <select name="pais" id="pais" required onchange="comprobarPais()">
+                <select name="pais" id="pais" required onchange="comprobarPais()"> <!-- onchange -> para ejecutar algo al seleccionar de un desplegable  y required para que sea obligatorio seleccionar una opcion -->
                     <option value="" selected>Elige país <!-- Atributo selected para dejar seleccionado por defecto -->
                     <option value="España">España
                     <option value="Alemania">Alemania
@@ -143,9 +146,8 @@
         </tr>
         <tr>
             <td colspan="2">
-                <input type="button" value="Chequear" onclick="Chequear(),check2(),check3()">
-                <input type="reset" value="Borrar">
-                <input type="submit" value="Enviar">
+                <input type="button" value="Chequear" onclick="Chequear(),check2(),check3()"> <!-- type=button para hacer botones  y onclick para ejecutar una funcion al hacer click en el boton -->
+                <input type="submit" value="Enviar"> <!-- type=submit para enviar el formulario --> 
             </td>
         </tr>
     </table>
