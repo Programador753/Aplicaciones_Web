@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .barra-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Estilos de la barra de progreso personalizada */
+        .barra {
+            width: 300px;
+            height: 30px;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            position: relative;
+            background-color: #f2f2f2; /* Color del fondo de la barra */
+        }
+
+        .barra-progreso {
+            height: 100%;
+            transition: width 0.5s ease; /* Transición suave */
+        }
+
+        /* Clases para diferentes colores de la barra de progreso */
+        .barra-progreso-verde {
+            background-color: green; /* Color de la barra verde */
+            width: 50%; /* Ancho inicial de la barra de progreso */
+        }
+
+        .barra-progreso-roja {
+            background-color: red; /* Color de la barra roja */
+            width: 15%; /* Ancho inicial de la barra de progreso */
+        }
+    </style>
+</head>
+<body>
+
+<td class="tablabot2">
+    <table>
+        <tr>
+            <td>  
+                <div class="barra-container">
+                    <label for="esperanza">Esperanza:</label>
+                    <!-- Barra de progreso verde con fondo -->
+                    <div class="barra">
+                        <div class="barra-progreso barra-progreso-verde"></div>
+                    </div>
+                    <label for="descontento">Descontento:</label>
+                    <!-- Barra de progreso roja con fondo -->
+                    <div class="barra">
+                        <div class="barra-progreso barra-progreso-roja"></div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</td>
+
+</body>
+</html>
