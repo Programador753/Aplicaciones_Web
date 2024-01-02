@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Historia de la Magia de Harry Potter</title>
+  <style>
+    body {
+      font-family: 'Garamond', serif;
+      background-color: #0e0e0e;
+      color: #fff;
+      text-align: center;
+    }
+
+    #game {
+      margin-top: 50px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    #options {
+      list-style: none;
+      padding: 0;
+    }
+
+    .option {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 25px;
+      border: 2px solid #f5e042;
+      background-color: #1d1d1d;
+      color: #f5e042;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .option:hover {
+      background-color: #f5e042;
+      color: #1d1d1d;
+    }
+
+    #feedback {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    #nextButton {
+      display: none;
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      background-color: #f5e042;
+      color: #1d1d1d;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    #nextButton:hover {
+      background-color: #ffd700;
+    }
+
+    #timer {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="game">
+    <h1>Historia de la Magia de Harry Potter</h1>
+    <h2 id="question"></h2>
+    <div id="options"></div>
+    <p id="feedback"></p>
+    <button id="nextButton">Siguiente Pregunta</button>
+    <p id="timer">Tiempo restante: <span id="time">10</span> segundos</p>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        question: "¿Quién es el profesor que enseña Historia de la Magia en Hogwarts?",
+        options: ["Severus Snape", "Albus Dumbledore", "Filius Flitwick", "Cuthbert Binns"],
+        answer: "Cuthbert Binns"
+      },
+      {
+        question: "¿Qué es un Squib en el mundo de Harry Potter?",
+        options: ["Un Muggle nacido en una familia de magos", "Una persona sin habilidades mágicas nacida de padres magos", "Un tipo de animal fantástico", "Un brujo oscuro"],
+        answer: "Una persona sin habilidades mágicas nacida de padres magos"
+      },
+      {
+        question: "¿Cuál es el nombre completo de Gellert Grindelwald?",
+        options: ["Gellert Percival Grindelwald", "Gellert Ignatius Grindelwald", "Gellert Corvus Grindelwald", "Gellert Abraxas Grindelwald"],
+        answer: "Gellert Percival Grindelwald"
+      },
+      {
+        question: "¿Quién es el profesor que enseña Historia de la Magia en Hogwarts?",
+        options: ["Severus Snape", "Albus Dumbledore", "Filius Flitwick", "Cuthbert Binns"],
+        answer: "Cuthbert Binns"
+      },
+      {
+        question: "¿Qué es un Squib en el mundo de Harry Potter?",
+        options: ["Un Muggle nacido en una familia de magos", "Una persona sin habilidades mágicas nacida de padres magos", "Un tipo de animal fantástico", "Un brujo oscuro"],
+        answer: "Una persona sin habilidades mágicas nacida de padres magos"
+      },
+      {
+        question: "¿Cuál es el nombre completo de Gellert Grindelwald?",
+        options: ["Gellert Percival Grindelwald", "Gellert Ignatius Grindelwald", "Gellert Corvus Grindelwald", "Gellert Abraxas Grindelwald"],
+        answer: "Gellert Percival Grindelwald"
+      },
+      {
+        question: "¿Cómo se llama el hermano de Albus Dumbledore?",
+        options: ["Aberforth", "Elphias", "Ariana", "Bathilda"],
+        answer: "Aberforth"
+      },
+      {
+        question: "¿Quién es el director de la Casa Slytherin durante los años de Harry Potter?",
+        options: ["Horace Slughorn", "Severus Snape", "Lucius Malfoy", "Tom Riddle"],
+        answer: "Severus Snape"
+      },
+      {
+        question: "¿Cuál es el patrón de Neville Longbottom?",
+        options: ["Una serpiente", "Un ciervo", "Un tejón", "Una liebre"],
+        answer: "Un tejón"
+      },
+      {
+        question: "¿Qué poder tiene el Espejo de Oesed?",
+        options: ["Refleja tus deseos más profundos", "Concede inmortalidad", "Predice el futuro", "Cura cualquier enfermedad"],
+        answer: "Refleja tus deseos más profundos"
+      },
+      {
+        question: "¿Cómo se llama el elfo doméstico que sirve a la familia Black?",
+        options: ["Kreacher", "Dobby", "Winky", "Hokey"],
+        answer: "Kreacher"
+      },
+      {
+        question: "¿Quién es el dueño original de la Varita de Saúco?",
+        options: ["Harry Potter", "Voldemort", "Dumbledore", "Grindelwald"],
+        answer: "Grindelwald"
+      },
+      {
+        question: "¿Qué animal es la mascota de Hagrid?",
+        options: ["Dragón", "Fénix", "Hipogrifo", "Acromántula"],
+        answer: "Acromántula"
+      },
+      {
+        question: "¿Cuál es el apellido de Luna, una estudiante excéntrica de Ravenclaw?",
+        options: ["Scamander", "Lovegood", "Weasley", "Abbott"],
+        answer: "Lovegood"
+      },
+      {
+        question: "¿Qué planta puede entrar en la mente de alguien y mostrar sus peores recuerdos?",
+        options: ["Alga Cruciatus", "Lirio de Frank", "Dementorium", "Menta Draconis"],
+        answer: "Lirio de Frank"
+      },
+      {
+        question: "¿Cuál es el hechizo utilizado para conjurar un Patronus?",
+        options: ["Expecto Patronum", "Accio Patronus", "Patronus Charm", "Aparecium Patronus"],
+        answer: "Expecto Patronum"
+      },
+      {
+        question: "¿Cuál es el nombre del director del Torneo de los Tres Magos en 'El cáliz de fuego'?",
+        options: ["Alastor Moody", "Rufus Scrimgeour", "Amos Diggory", "Bartemius Crouch"],
+        answer: "Bartemius Crouch"
+      },
+      {
+        question: "¿Cuál es el nombre de la mascota de Ron Weasley?",
+        options: ["Scabbers", "Hedwig", "Crookshanks", "Fawkes"],
+        answer: "Scabbers"
+      },
+      {
+        question: "¿Cuál es el apellido de la familia que se considera la más oscura de la historia de la magia?",
+        options: ["Lestrange", "Malfoy", "Black", "Gaunt"],
+        answer: "Gaunt"
+      },
+      {
+        question: "¿En qué año Harry Potter derrotó a Lord Voldemort?",
+        options: ["1997", "1998", "1999", "2000"],
+        answer: "1998"
+      },
+      {
+        question: "¿Cuál es el apellido de la familia de magos que comparte similitudes con la realeza?",
+        options: ["Peverell", "Potters", "Malfoys", "Weasleys"],
+        answer: "Peverell"
+      },
+      {
+        question: "¿Quién fue el director de la Escuela de Magia y Hechicería Hogwarts antes de Albus Dumbledore?",
+        options: ["Phineas Nigellus Black", "Armando Dippet", "Brutus Scrimgeour", "Eupraxia Mole"],
+        answer: "Armando Dippet"
+      },
+      {
+        question: "¿Qué animal está asociado con la Casa Hufflepuff en Hogwarts?",
+        options: ["León", "Águila", "Tejón", "Serpiente"],
+        answer: "Tejón"
+      },
+      {
+        question: "¿Cuál es el nombre del elfo doméstico que sirve a la familia Malfoy?",
+        options: ["Dobby", "Hokey", "Kreacher", "Winky"],
+        answer: "Dobby"
+      },
+      {
+        question: "¿Cuál es el nombre del profesor de Defensa Contra las Artes Oscuras en 'El prisionero de Azkaban'?",
+        options: ["Remus Lupin", "Alastor Moody", "Gilderoy Lockhart", "Quirinus Quirrell"],
+        answer: "Remus Lupin"
+      },
+      {
+        question: "¿Cuál es el nombre del profesor de Defensa Contra las Artes Oscuras en 'El cáliz de fuego'?",
+        options: ["Remus Lupin", "Alastor Moody", "Gilderoy Lockhart", "Quirinus Quirrell"],
+        answer: "Alastor Moody"
+      },
+      {
+        question: "¿Cuál es el nombre del profesor de Defensa Contra las Artes Oscuras en 'La Orden del Fénix'?",
+        options: ["Remus Lupin", "Alastor Moody", "Gilderoy Lockhart", "Dolores Umbridge"],
+        answer: "Dolores Umbridge"
+      },
+      {
+        question: "¿Cuál es el nombre del profesor de Defensa Contra las Artes Oscuras en 'El misterio del príncipe'?",
+        options: ["Remus Lupin", "Alastor Moody", "Gilderoy Lockhart", "Severus Snape"],
+        answer: "Severus Snape"
+      },
+      {
+        question: "¿Cuál es el nombre del profesor de Defensa Contra las Artes Oscuras en 'Las reliquias de la muerte'?",
+        options: ["Remus Lupin", "Alastor Moody", "Gilderoy Lockhart", "Amycus Carrow"],
+        answer: "Amycus Carrow"
+      },
+      {
+        question: "¿Cuál es el nombre del profesor de Pociones en 'El prisionero de Azkaban'?",
+        options: ["Horace Slughorn", "Severus Snape", "Remus Lupin", "Gilderoy Lockhart"],
+        answer: "Severus Snape"
+      },
+
+    ];
+
+    let currentQuestion = 0;
+    let timeLeft = 100;
+    let timer;
+
+    const questionElement = document.getElementById('question');
+    const optionsElement = document.getElementById('options');
+    const feedbackElement = document.getElementById('feedback');
+    const nextButton = document.getElementById('nextButton');
+    const timeElement = document.getElementById('time');
+
+    function showQuestion() {
+      const current = questions[currentQuestion];
+      questionElement.textContent = current.question;
+      optionsElement.innerHTML = '';
+
+      current.options.forEach(option => {
+        const div = document.createElement('div');
+        div.textContent = option;
+        div.classList.add('option');
+        div.addEventListener('click', () => checkAnswer(option));
+        optionsElement.appendChild(div);
+      });
+
+      startTimer();
+    }
+
+    function startTimer() {
+      timeLeft = 100;
+      timer = setInterval(() => {
+        timeLeft--;
+        timeElement.textContent = timeLeft;
+        if (timeLeft === 0) {
+          clearInterval(timer);
+          checkAnswer();
+        }
+      }, 1000);
+    }
+
+    function checkAnswer(selectedOption) {
+      clearInterval(timer);
+      const correctAnswer = questions[currentQuestion].answer;
+
+      if (selectedOption === correctAnswer) {
+        feedbackElement.textContent = '¡Respuesta correcta!';
+      } else {
+        feedbackElement.textContent = `Respuesta incorrecta. La respuesta correcta es: ${correctAnswer}`;
+      }
+
+      nextButton.style.display = 'block';
+      nextButton.addEventListener('click', nextQuestion);
+    }
+
+    function nextQuestion() {
+      currentQuestion++;
+      if (currentQuestion < questions.length) {
+        feedbackElement.textContent = '';
+        nextButton.style.display = 'none';
+        showQuestion();
+      } else {
+        endGame();
+      }
+    }
+
+    function endGame() {
+      questionElement.textContent = 'Fin del juego';
+      optionsElement.innerHTML = '';
+      feedbackElement.textContent = '¡Juego terminado!';
+      nextButton.style.display = 'none';
+      timeElement.textContent = '';
+    }
+
+    showQuestion();
+  </script>
+</body>
+</html>
