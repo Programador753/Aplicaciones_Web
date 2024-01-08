@@ -12,7 +12,7 @@
 
         /* Estilos de la barra de progreso personalizada */
         .barra {
-            width: 300px;
+            width: 600px;
             height: 30px;
             border-radius: 5px;
             overflow: hidden;
@@ -23,18 +23,17 @@
 
         .barra-progreso {
             height: 100%;
+            width: 0; /* Inicialmente la barra estará vacía */
             transition: width 0.5s ease; /* Transición suave */
         }
 
         /* Clases para diferentes colores de la barra de progreso */
         .barra-progreso-verde {
             background-color: green; /* Color de la barra verde */
-            width: 50%; /* Ancho inicial de la barra de progreso */
         }
 
         .barra-progreso-roja {
             background-color: red; /* Color de la barra roja */
-            width: 15%; /* Ancho inicial de la barra de progreso */
         }
     </style>
 </head>
@@ -43,23 +42,38 @@
 <td class="tablabot2">
     <table>
         <tr>
-            <td>  
+            <td>
                 <div class="barra-container">
-                    <label for="esperanza">Esperanza:</label>
                     <!-- Barra de progreso verde con fondo -->
                     <div class="barra">
-                        <div class="barra-progreso barra-progreso-verde"></div>
+                        <div class="barra-progreso barra-progreso-verde" id="barraVerde"></div>
                     </div>
-                    <label for="descontento">Descontento:</label>
+
                     <!-- Barra de progreso roja con fondo -->
                     <div class="barra">
-                        <div class="barra-progreso barra-progreso-roja"></div>
+                        <div class="barra-progreso barra-progreso-roja" id="barraRoja"></div>
                     </div>
                 </div>
             </td>
         </tr>
     </table>
 </td>
+
+<script>
+    // Función para actualizar el tamaño de la barra de progreso
+    function actualizarBarra(barraId) {
+        var barra = document.getElementById(barraId);
+        var currentWidth = parseFloat(barra.style.width) || 0; // Obtener el ancho actual de la barra
+        var newWidth = currentWidth + 10; // Incrementar el ancho en 10
+        barra.style.width = newWidth + 'px'; // Establecer el nuevo ancho de la barra
+    }
+
+    // Ejemplo: Aumentar el progreso de las barras de 10 en 10 cada vez que se llama a la función
+    setInterval(function() {
+        actualizarBarra('barraVerde'); // Aumentar el progreso de la barra verde
+        actualizarBarra('barraRoja'); // Aumentar el progreso de la barra roja
+    }, 1000); // Intervalo de tiempo en milisegundos (aquí cada segundo)
+</script>
 
 </body>
 </html>
