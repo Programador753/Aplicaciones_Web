@@ -8,12 +8,13 @@ h1, p {
     border:double 5px red
 }
 .mayusculas{
-    text-transform:uppercase;
-    font-size:14pt;
-    font-weight:bold}
+    text-transform:uppercase; /* Convierte el texto a mayúsculas */
+    font-size:14pt; /* Tamaño de la fuente */
+    font-weight:bold /* Negrita */
+}
 .sombreado{
-    background-color:#ff6699;
-    cursor:pointer
+    background-color:#ff6699; /* Color de fondo */
+    cursor:pointer /* Cambia el cursor al pasar por encima */
 }
 a{
     text-decoration:none;
