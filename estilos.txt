@@ -1,9 +1,9 @@
  <!-- COLORES, FONDOS, TEXTOS, FUENTES 
- 	 font-size			tamaï¿½o del texto		pt in cm px    
+ 	 font-size			tamao del texto		pt in cm px    
      font-family		familia de la fuente	nombre de la fuente
 	 font-weight		ancho de la fuente		normal, bold, bolder, lighter
 	 font-style			estilo de la letra		normal, italic, oblique
-	 font-size-adjust	ajusta el tamaï¿½o		none, nï¿½mero
+	 font-size-adjust	ajusta el tamao		none, nmero
 	 line-height		interlineado			pt in cm px
 	 color				color del texto			nombre del color
 	 text-decoration	Estilo especial			none, underline, italic, line-throught
@@ -16,8 +16,8 @@
 	 text-decoration	decorar el texto		none, underline, overline, blink, line-through, inherit
 	 background-color	color fondo				nombre o valor RGB
 	 background-image	imagen de fondo			url(nombre)
-	 background-repeat	repeticion del fondo	nï¿½, no-repeat
-	 background-attachment  fijaciï¿½n del fondo		fixed
+	 background-repeat	repeticion del fondo	n, no-repeat
+	 background-attachment  fijacin del fondo		fixed
 	 background-position posicion imagen		center, left, right, top
 	 
 	 BLOQUES, CAPAS O CAJAS
@@ -26,25 +26,25 @@
 	 border-color		top right bottom left   border-color:red green blue pink
 	 border-top			borde superior			border-top:thick double #6600CC
 	 border-right		borde derecho			border-right:medium solid #00ff00
-	 border-width		tamaï¿½o ancho caja
+	 border-width		tamao ancho caja
 						top right bottom left	border-width:10px, 20px,5px, 3px
 						top (right left) bottom
 						(top bottom) (right left)
 						(top right bottom left)
-	 margin				tamaï¿½o margen caja
+	 margin				tamao margen caja
 						top right bottom left	margin:10px, 20px,5px, 3px
 						top (right left) bottom
 						(top bottom) (right left)
 						(top right bottom left)
 	 margin-left		margen izdo.			margin-left: 5px
 	 margin-bottom		margen inferior			margin-bottom: 10px
-	 padding			tamaï¿½o relleno caja
+	 padding			tamao relleno caja
 						top right bottom left	padding:10px, 20px,5px, 3px
 						top (right left) bottom
 						(top bottom) (right left)
 						(top right bottom left)
 	
-	TAMAï¿½O Y POSICIONAMIENTO
+	TAMAO Y POSICIONAMIENTO
 	position			Tipo posicionamiento	static, absolute, fixed, relative, inherit
 	top					Distancia parte sup		top:5px			(Si position es static no tiene efecto)
 	right				Distancia parte dcha	right:5px		(Si position es static no tiene efecto)
@@ -64,13 +64,13 @@
 	visibility			Determina su visualiz.	visibility:
 						visible, hidden, collapse
 
-identificadores  Para diseï¿½os exclusivos de etiquetas
+identificadores  Para diseos exclusivos de etiquetas
 class			 Para utilizarlo en todos los elementos HTML
-pseudoclases	 Permiten clasificar elementos HTML segï¿½n el estado en el que se encuentran
+pseudoclases	 Permiten clasificar elementos HTML segn el estado en el que se encuentran
 
    a:visited Vinculo visitado
-   a:hover   Vï¿½nculo donde estï¿½ el ratï¿½n
-   a:link    Vï¿½nculo no visitado
-   a:focus   Vï¿½nculo seleccionado por teclado
-   a:active  Vï¿½nculo que recibe el click
+   a:hover   Vnculo donde est el ratn
+   a:link    Vnculo no visitado
+   a:focus   Vnculo seleccionado por teclado
+   a:active  Vnculo que recibe el click
 -->
